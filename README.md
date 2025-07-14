@@ -1,0 +1,2 @@
+# EasyGoDocs
+Documentation made easy
