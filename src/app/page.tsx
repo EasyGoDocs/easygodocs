@@ -20,7 +20,8 @@ export default function Home() {
         </a>
         <div className="mt-8 max-w-2xl text-center text-blue-200 text-base font-normal">
           <span className="inline-block border-l-4 border-blue-500 pl-4 italic">
-            "Documentation should be as easy as writing code. EasyGoDocs makes it possible."
+            &quot;Documentation should be as easy as writing code. EasyGoDocs
+            makes it possible.&quot;
           </span>
         </div>
       </main>

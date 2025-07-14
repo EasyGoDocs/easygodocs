@@ -1,3 +1,4 @@
+import React from "react";
 import type { Metadata } from "next";
 // Import DM Sans from next/font/google to set as the default font for the project
 import { DM_Sans } from "next/font/google";
@@ -12,7 +13,8 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: "EasyGoDocs",
-  description: "Effortless, elegant, and powerful documentation for your Go projects.",
+  description:
+    "Effortless, elegant, and powerful documentation for your Go projects.",
 };
 
 export default function RootLayout({
@@ -22,9 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${dmSans.variable} antialiased`}>
-        {children}
-      </body>
+      <body className={`${dmSans.variable} antialiased`}>{children}</body>
     </html>
   );
 }
