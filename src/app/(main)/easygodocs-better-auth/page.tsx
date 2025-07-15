@@ -5,7 +5,7 @@ import React from "react";
 function page() {
   return (
     <div>
-      <DocumentationPage docData={docData} />
+      <DocumentationPage jsonData={docData} />
     </div>
   );
 }

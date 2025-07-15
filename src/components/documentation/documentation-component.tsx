@@ -43,7 +43,7 @@ interface DocData {
 }
 
 interface DocumentationPageProps {
-  docData: DocData;
+  jsonData: DocData;
 }
 
 const SidebarNav = ({
@@ -205,7 +205,7 @@ const renderContentBlock = (block: ContentBlock, idx: number) => {
   }
 };
 
-const DocumentationPage = ({ docData }: DocumentationPageProps) => {
+const DocumentationPage = ({ jsonData }: DocumentationPageProps) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -229,7 +229,7 @@ const DocumentationPage = ({ docData }: DocumentationPageProps) => {
               </h2>
             </div>
             <ScrollArea className="h-[calc(100vh-80px)] p-4">
-              <SidebarNav items={docData.sidebar} />
+              <SidebarNav items={jsonData.sidebar} />
             </ScrollArea>
           </SheetContent>
         </Sheet>
@@ -242,7 +242,7 @@ const DocumentationPage = ({ docData }: DocumentationPageProps) => {
             </h2>
           </div>
           <ScrollArea className="flex-1 p-6">
-            <SidebarNav items={docData.sidebar} />
+            <SidebarNav items={jsonData.sidebar} />
           </ScrollArea>
         </aside>
 
@@ -253,15 +253,15 @@ const DocumentationPage = ({ docData }: DocumentationPageProps) => {
             <div className="flex-1 min-w-0">
               <div className="px-4 py-8 lg:px-8 lg:py-12">
                 <div className="lg:pr-80">
-                  {docData.content.map((block, idx) =>
+                  {jsonData.content.map((block, idx) =>
                     renderContentBlock(block, idx)
                   )}
-                  {docData.credits && (
+                  {jsonData.credits && (
                     <div className="mt-12 text-sm text-muted-foreground">
                       <Separator className="my-4" />
-                      <div>Author: {docData.credits.author}</div>
+                      <div>Author: {jsonData.credits.author}</div>
                       <div>
-                        Contributors: {docData.credits.contributors.join(", ")}
+                        Contributors: {jsonData.credits.contributors.join(", ")}
                       </div>
                     </div>
                   )}
@@ -273,7 +273,7 @@ const DocumentationPage = ({ docData }: DocumentationPageProps) => {
             <aside className="hidden xl:block xl:w-80 xl:fixed xl:right-0 xl:top-0 xl:h-full xl:border-l xl:border-border xl:bg-background">
               <div className="p-6 pt-16">
                 <ScrollArea className="h-[calc(100vh-4rem)]">
-                  <TableOfContents items={docData.toc} />
+                  <TableOfContents items={jsonData.toc} />
                 </ScrollArea>
               </div>
             </aside>
