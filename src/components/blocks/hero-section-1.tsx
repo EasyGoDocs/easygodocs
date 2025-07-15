@@ -105,7 +105,7 @@ export function HeroSection() {
                   </Link>
 
                   <h1 className="mt-8 max-w-4xl mx-auto text-balance text-6xl md:text-7xl lg:mt-16 xl:text-[5.25rem]">
-                    Modern Solutions for Customer Engagement
+                    Modern Solutions to Master Documentation
                   </h1>
                   <p className="mx-auto mt-8 max-w-2xl text-balance text-lg">
                     &quot;Documentation should be as easy as writing code.
