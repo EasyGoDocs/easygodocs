@@ -90,7 +90,7 @@
     },
     {
       "type": "image",
-      "src": "https://example.com/image-1.jpg",
+      "src": "https://placehold.co/1000x500",
       "alt": "Example screenshot"
     }
   ],
