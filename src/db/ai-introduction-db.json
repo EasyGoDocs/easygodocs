@@ -1,0 +1,20 @@
+{
+  "slug": "better-auth-in-next-js",
+  "title": "Better Auth In Next JS",
+  "desc": "This is a blog about how to use Next.js and Supabase to build a simple authentication system.",
+  "content": {
+    "heading": "Better Auth In Next JS",
+    "sub-heading": "This is a blog about how to use Next.js and Supabase to build a simple authentication system.",
+    "commands": {
+      "cmd-1": "pnpm add better-auth"
+    },
+    "images": {
+      "image-1": "https://example.com/image-1.jpg",
+      "image-2": "https://example.com/image-2.jpg"
+    }
+  },
+  "credits": {
+    "author": "Jane Doe",
+    "contributors": ["John Smith", "Alice Johnson"]
+  }
+}

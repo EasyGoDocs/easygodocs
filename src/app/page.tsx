@@ -1,4 +1,7 @@
 import React from "react";
+import AIJson from "@/db/ai-introduction-db.json";
+
+console.log(AIJson.title);
 
 export default function Home() {
   return (
