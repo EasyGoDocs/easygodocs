@@ -5,10 +5,7 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 
 const dmSans = DM_Sans({
-  variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -24,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${dmSans.variable} antialiased`}>{children}</body>
+      <body className={`${dmSans.className} antialiased`}>{children}</body>
     </html>
   );
 }
