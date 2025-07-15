@@ -1,8 +1,9 @@
 import type { ReactNode } from "react";
+import React from "react";
 import { NavBar } from "@/components/ui/tubelight-navbar";
 
 // Demo NavBar component for the documentation site
-export function NavBarDemo() {
+function NavBarDemo() {
   const navItems = [
     { name: 'Home', url: '#', icon: 'Home' },
     { name: 'About', url: '#', icon: 'User' },
