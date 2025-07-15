@@ -23,7 +23,7 @@ export function AboutUsSection() {
         className="pointer-events-none absolute inset-0 w-full h-full bg-[radial-gradient(circle_at_50%_60%,rgba(128,128,128,0.07)_0%,transparent_80%)] z-0"
       />
 
-      <div className="mx-auto max-w-6xl px-6 flex flex-col md:flex-row items-center md:items-start gap-12 md:gap-16 text-left">
+      <div className="mx-auto max-w-6xl px-6 flex flex-col-reverse md:flex-row items-center md:items-start gap-12 md:gap-16 text-left">
         {/* Left: Cards */}
         <div className="flex-1 w-full grid grid-cols-1 gap-8 md:grid-cols-1 xl:grid-cols-1">
           <div className="flex flex-col gap-8">
@@ -51,7 +51,7 @@ export function AboutUsSection() {
         </div>
         {/* Right: Text */}
         <div className="flex-1 max-w-xl">
-          <h2 className="text-balance text-4xl md:text-7xl lg:mt-16 xl:text-[5.25rem] mb-6">
+          <h2 className="text-balance text-4xl md:text-7xl lg:mt-16 xl:text-[4rem] mb-6">
             About Us
           </h2>
           <p className="max-w-lg text-lg text-muted-foreground mb-8">

@@ -18,6 +18,7 @@
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.5",
     "lucide-react": "^0.525.0",
+    "motion": "^12.23.5",
     "next": "15.3.5",
     "prop-types": "^15.8.1",
     "react": "^19.0.0",
