@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 "use client";
 import React from "react";
 import Link from "next/link";
@@ -23,7 +21,7 @@ const transitionVariants = {
         type: "spring",
         bounce: 0.3,
         duration: 1.5,
-      },
+      } as const,
     },
   },
 };
@@ -64,7 +62,7 @@ export function HeroSection() {
                       type: "spring",
                       bounce: 0.3,
                       duration: 2,
-                    },
+                    } as const,
                   },
                 },
               }}
