@@ -102,7 +102,7 @@ export function HeroSection() {
                                     </h1>
                                     <p
                                         className="mx-auto mt-8 max-w-2xl text-balance text-lg">
-                                        Highly customizable components for building modern websites and applications that look and feel the way you mean it.
+                                        &quot;Documentation should be as easy as writing code. EasyGoDocs makes it possible.&quot;
                                     </p>
                                 </AnimatedGroup>
 
