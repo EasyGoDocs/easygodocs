@@ -26,7 +26,7 @@ export function MvpPromoSection() {
       <div className="mx-auto max-w-6xl px-6 flex flex-col md:flex-row items-center md:items-start gap-12 md:gap-16 text-left">
         {/* Left: Text */}
         <div className="flex-1 max-w-xl">
-          <h2 className="text-balance text-4xl md:text-7xl lg:mt-16 xl:text-[5.25rem] mb-6">
+          <h2 className="text-balance text-4xl md:text-7xl lg:mt-16 xl:text-[4rem] mb-6">
             Build your MVPs even faster with our platform
           </h2>
           <p className="max-w-lg text-lg text-muted-foreground mb-8">
