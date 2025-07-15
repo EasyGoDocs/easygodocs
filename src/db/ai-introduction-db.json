@@ -1,18 +1,99 @@
 {
-  "slug": "better-auth-in-next-js",
-  "title": "Better Auth In Next JS",
-  "desc": "This is a blog about how to use Next.js and Supabase to build a simple authentication system.",
-  "content": {
-    "heading": "Better Auth In Next JS",
-    "sub-heading": "This is a blog about how to use Next.js and Supabase to build a simple authentication system.",
-    "commands": {
-      "cmd-1": "pnpm add better-auth"
+  "sidebar": [
+    {
+      "title": "Getting Started",
+      "href": "#getting-started",
+      "children": [
+        { "title": "Installation", "href": "#installation" },
+        { "title": "Quick Start", "href": "#quick-start" }
+      ]
     },
-    "images": {
-      "image-1": "https://example.com/image-1.jpg",
-      "image-2": "https://example.com/image-2.jpg"
+    {
+      "title": "API Reference",
+      "href": "#api-reference",
+      "children": [
+        { "title": "Authentication", "href": "#authentication" },
+        { "title": "Users", "href": "#users" }
+      ]
     }
-  },
+  ],
+  "toc": [
+    { "id": "getting-started", "title": "Getting Started", "level": 1 },
+    { "id": "installation", "title": "Installation", "level": 2 },
+    { "id": "quick-start", "title": "Quick Start", "level": 2 },
+    { "id": "api-reference", "title": "API Reference", "level": 1 },
+    { "id": "authentication", "title": "Authentication", "level": 2 },
+    { "id": "users", "title": "Users", "level": 2 }
+  ],
+  "content": [
+    {
+      "type": "heading",
+      "id": "getting-started",
+      "level": 1,
+      "text": "Getting Started"
+    },
+    {
+      "type": "paragraph",
+      "text": "Welcome to the documentation for Better Auth in Next.js. This guide will help you set up authentication quickly and securely."
+    },
+    {
+      "type": "heading",
+      "id": "installation",
+      "level": 2,
+      "text": "Installation"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "code": "pnpm add better-auth"
+    },
+    {
+      "type": "heading",
+      "id": "quick-start",
+      "level": 2,
+      "text": "Quick Start"
+    },
+    {
+      "type": "paragraph",
+      "text": "Import the package and use it in your Next.js project."
+    },
+    {
+      "type": "code",
+      "language": "js",
+      "code": "import { AuthProvider } from 'better-auth'\n\nexport default function App() {\n  return <AuthProvider>...</AuthProvider>\n}"
+    },
+    {
+      "type": "heading",
+      "id": "api-reference",
+      "level": 1,
+      "text": "API Reference"
+    },
+    {
+      "type": "heading",
+      "id": "authentication",
+      "level": 2,
+      "text": "Authentication"
+    },
+    {
+      "type": "paragraph",
+      "text": "Use the AuthProvider to wrap your application and provide authentication context."
+    },
+    {
+      "type": "heading",
+      "id": "users",
+      "level": 2,
+      "text": "Users"
+    },
+    {
+      "type": "paragraph",
+      "text": "You can access the current user via the useAuth hook."
+    },
+    {
+      "type": "image",
+      "src": "https://example.com/image-1.jpg",
+      "alt": "Example screenshot"
+    }
+  ],
   "credits": {
     "author": "Jane Doe",
     "contributors": ["John Smith", "Alice Johnson"]
