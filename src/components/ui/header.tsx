@@ -112,7 +112,7 @@ export const HeroHeader = () => {
                   rel="noopener noreferrer"
                   aria-label="GitHub"
                 >
-                  <FaGithub className="w-5 h-5 text-zinc-900 hover:text-blue-600 transition-colors" />
+                  <FaGithub className="w-5 h-5 text-zinc-600 hover:text-zinc-800 transition-colors" />
                 </Link>
                 <Link
                   href="https://twitter.com/"
@@ -120,16 +120,14 @@ export const HeroHeader = () => {
                   rel="noopener noreferrer"
                   aria-label="Twitter (X)"
                 >
-                  <FaXTwitter className="w-5 h-5 text-zinc-900 hover:text-blue-600 transition-colors" />
+                  <FaXTwitter className="w-5 h-5 text-zinc-600 hover:text-zinc-800 transition-colors" />
                 </Link>
                 <Button
                   asChild
                   size="sm"
                   className={cn(isScrolled ? "lg:inline-flex" : "hidden")}
                 >
-                  <Link href="/all-docs" target="_blank">
-                    <span>Get Started</span>
-                  </Link>
+                  <Link href="/all-docs">All Docs</Link>
                 </Button>
               </div>
             </div>

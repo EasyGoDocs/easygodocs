@@ -1,8 +1,7 @@
 import React from "react";
-import { HeroSection } from "@/components/page-components/hero-section-1";
+import { HeroSection } from "@/components/page-components/hero-section";
 import AboutUsSection from "@/components/page-components/about-us-section";
 import MvpPromoSection from "@/components/page-components/mvp-promo-section";
-import { Footer } from "@/components/page-components/footer-section";
 
 export default function page() {
   return (
@@ -10,7 +9,6 @@ export default function page() {
       <HeroSection />
       <MvpPromoSection />
       <AboutUsSection />
-      <Footer />
     </>
   );
 }
