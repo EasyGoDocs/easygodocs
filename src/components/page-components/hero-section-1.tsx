@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { AnimatedGroup } from "@/components/ui/animated-group";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { FaGithub } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6"; // For the X (Twitter) icon
 
 const transitionVariants = {
   item: {
@@ -293,7 +295,7 @@ export function HeroSection() {
 const menuItems = [
   { name: "Features", href: "#link" },
   { name: "Solution", href: "#link" },
-  { name: "Pricing", href: "#link" },
+ 
   { name: "About", href: "#link" },
 ];
 
@@ -371,32 +373,20 @@ const HeroHeader = () => {
                   ))}
                 </ul>
               </div>
-              <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-                <Button
-                  asChild
-                  variant="outline"
-                  size="sm"
-                  className={cn(isScrolled && "lg:hidden")}
-                >
-                  <Link href="#">
-                    <span>Login</span>
-                  </Link>
-                </Button>
-                <Button
-                  asChild
-                  size="sm"
-                  className={cn(isScrolled && "lg:hidden")}
-                >
-                  <Link href="#">
-                    <span>Sign Up</span>
-                  </Link>
-                </Button>
+              <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit items-center gap-3">
+                {/* Social Icons */}
+                <Link href="https://github.com/EasyGoDocs/easygodocs.git" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <FaGithub className="w-5 h-5 text-zinc-900 hover:text-blue-600 transition-colors" />
+                </Link>
+                <Link href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter (X)">
+                  <FaXTwitter className="w-5 h-5 text-zinc-900 hover:text-blue-600 transition-colors" />
+                </Link>
                 <Button
                   asChild
                   size="sm"
                   className={cn(isScrolled ? "lg:inline-flex" : "hidden")}
                 >
-                  <Link href="#">
+                  <Link href="./all-docs" target="blank">
                     <span>Get Started</span>
                   </Link>
                 </Button>
