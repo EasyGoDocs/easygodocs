@@ -130,12 +130,12 @@ export function HeroSection() {
                 >
                   <div
                     key={1}
-                    className="bg-foreground/10 rounded-[14px] border p-0.5"
+                    className="bg-foreground/20 rounded-[14px] border p-0.5"
                   >
                     <Button
                       asChild
                       size="lg"
-                      className="rounded-xl px-5 text-base"
+                      className="rounded-[12px] px-5 text-base"
                     >
                       <Link href="#link">
                         <span className="text-nowrap">Start Building</span>
@@ -410,24 +410,16 @@ const HeroHeader = () => {
 };
 
 const Logo = ({ className }: { className?: string }) => (
-  <span
-    className={cn(
-      "flex items-center gap-2 font-extrabold text-2xl tracking-tight text-zinc-900",
-      className
-    )}
-  >
-    <span className="w-25 h-25 flex items-center justify-center overflow-hidden">
-      <Image
-        src="/logoIcon.png"
-        alt="EasyGoDocs logo"
-        width={100}
-        height={100}
-        className="object-contain scale-125"
-        style={{ display: "inline-block" }}
-        priority
-      />
-    </span>
-    <span className="leading-none">EasyGoDocs</span>
+  <span className={cn("flex items-center gap-2", className)}>
+    <Image
+      src="https://placehold.co/100x100"
+      alt="EasyGoDocs logo"
+      width={40}
+      height={40}
+      className="rounded-full"
+      priority
+    />
+    <span className="text-balance font-semibold">EasyGoDocs.</span>
   </span>
 );
 
