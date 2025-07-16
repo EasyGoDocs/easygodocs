@@ -40,3 +40,46 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details. -->
+
+
+
+├── **public**
+│   └── logoIcon.png
+├── README.md
+├── **src**
+│   ├── **app**
+│   │   ├── **all-docs**
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx  <-- This is a important page
+│   │   ├── **contribution-guide**
+│   │   │   └── page.tsx
+│   │   ├── favicon.ico
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   ├── **(main)**
+│   │   │   ├── **easygodocs-better-auth**
+│   │   │   │   └── page.tsx
+│   │   │   └── layout.tsx
+│   │   └── **(public)**
+│   │       └── page.tsx
+│   ├── **components**
+│   │   ├── **documentation**
+│   │   │   └── documentation-component.tsx
+│   │   ├── **page-components**
+│   │   │   ├── about-us-section.tsx
+│   │   │   ├── footer-section.tsx
+│   │   │   ├── hero-section-1.tsx
+│   │   │   └── mvp-promo-section.tsx
+│   │   └── **ui** <-- ShadCN/UI components
+│   │       ├── animated-group.tsx
+│   │       ├── button.tsx
+│   │       ├── card-hover-effect.tsx
+│   │       ├── scroll-area.tsx
+│   │       ├── separator.tsx
+│   │       ├── sheet.tsx
+│   │       ├── text-effect.tsx
+│   │       └── tubelight-navbar.tsx
+│   ├── **db**
+│   │   └── ai-introduction-db.json
+│   └── **lib**
+│  			 └── utils.ts
