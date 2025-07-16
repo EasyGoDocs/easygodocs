@@ -139,8 +139,8 @@ export function HeroSection() {
                       size="lg"
                       className="rounded-[12px] px-5 text-base"
                     >
-                      <Link href="#link">
-                        <span className="text-nowrap">Start Building</span>
+                      <Link href="/all-docs" target="blank">
+                        <span className="text-nowrap">All Docs</span>
                       </Link>
                     </Button>
                   </div>
@@ -151,8 +151,8 @@ export function HeroSection() {
                     variant="ghost"
                     className="h-10.5 rounded-xl px-5"
                   >
-                    <Link href="#link">
-                      <span className="text-nowrap">Request a demo</span>
+                    <Link href="/contribution-guide" target="blank">
+                      <span className="text-nowrap">Wanna Contribute ?</span>
                     </Link>
                   </Button>
                 </AnimatedGroup>
@@ -292,10 +292,10 @@ export function HeroSection() {
 }
 
 const menuItems = [
-  { name: "Features", href: "#link" },
-  { name: "Solution", href: "#link" },
- 
-  { name: "About", href: "#link" },
+  { name: "Features", href: "/features" },
+  { name: "Solution", href: "/sollution" },
+  { name: "Pricing", href: "/pricing" },
+  { name: "About", href: "/about" },
 ];
 
 const HeroHeader = () => {
