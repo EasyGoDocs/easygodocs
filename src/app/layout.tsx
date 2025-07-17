@@ -5,7 +5,7 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { HeroHeader } from "@/components/ui/header";
 import { Footer } from "@/components/page-components/footer-section";
-
+import {Databuddy} from "@databuddy/sdk"
 const dmSans = DM_Sans({
   subsets: ["latin"],
 });
