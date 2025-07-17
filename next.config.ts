@@ -1,27 +1,34 @@
-import type { NextConfig } from "next";
-import createMDX from '@next/mdx'
+// next.config.ts
+import createMDX from '@next/mdx';
+import type { NextConfig } from 'next';
 
-/** @type {import('next').NextConfig} */
+// Enable MDX support
+const withMDX = createMDX({
+  extension: /\.(mdx)$/,
+  options: {
+    remarkPlugins: [],
+    rehypePlugins: [],
+  },
+});
 
+// Next.js config with all your settings preserved
 const nextConfig: NextConfig = {
-  /* config options here */
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "placehold.co",
-        pathname: "/**",
+        protocol: 'https',
+        hostname: 'placehold.co',
+        pathname: '/**',
       },
     ],
     dangerouslyAllowSVG: true,
   },
-  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'], // Enable MDX routing
+  experimental: {
+    // Required to use MDX with the App Router
+    mdxRs: true,
+  },
 };
 
-const withMDX = createMDX({
-  // Add markdown plugins here, as desired
-  extension: /\.(md|mdx)$/,
-})
-
-
+// Export wrapped config
 export default withMDX(nextConfig);

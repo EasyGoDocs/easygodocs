@@ -64,7 +64,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 │   │       └── page.tsx
 │   ├── **components**
 │   │   ├── **documentation**
-│   │   │   └── documentation-component.tsx
+│   │   │   └── documentation-component.tsx <-This is important page->
 │   │   ├── **page-components**
 │   │   │   ├── about-us-section.tsx
 │   │   │   ├── footer-section.tsx
@@ -80,6 +80,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 │   │       ├── text-effect.tsx
 │   │       └── tubelight-navbar.tsx
 │   ├── **db**
-│   │   └── ai-introduction-db.json
+│   │   └── ai-introduction-db.json <-This is important->
 │   └── **lib**
 │  			 └── utils.ts
