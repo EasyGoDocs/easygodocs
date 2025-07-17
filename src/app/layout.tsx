@@ -26,6 +26,10 @@ export default function RootLayout({
       <body className={`${dmSans.className} antialiased`}>
         <HeroHeader />
         {children}
+        <Databuddy
+                clientId="w2muEC5fMcyhRncjyO380"
+                        enableBatching={true}
+                              />
         <Footer />
       </body>
     </html>
