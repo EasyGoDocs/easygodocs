@@ -9,6 +9,7 @@ import {
   LinkedinIcon,
   YoutubeIcon,
 } from "lucide-react";
+import Link from "next/link";
 
 interface FooterLink {
   title: string;
@@ -81,13 +82,15 @@ export function Footer() {
                 <ul className="text-muted-foreground mt-4 space-y-2 text-sm">
                   {section.links.map((link) => (
                     <li key={link.title}>
-                      <a
+                      <Link
                         href={link.href}
                         className="hover:text-foreground inline-flex items-center transition-all duration-300"
+                        target={link.href.startsWith('http') ? '_blank' : undefined}
+                        rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                       >
                         {link.icon && <link.icon className="me-1 size-4" />}
                         {link.title}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>

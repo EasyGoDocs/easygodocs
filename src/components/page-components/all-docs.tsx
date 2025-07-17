@@ -21,7 +21,7 @@ function AllDocs() {
         </p>
         <span>
           Nothing to read on the previous line,{" "}
-          <Link href={"/contrition-guide"} className="font-semibold underline">
+          <Link href={"/contribution-guide"} className="font-semibold underline">
             Wanna Contribute to Our Docs?
           </Link>
         </span>
