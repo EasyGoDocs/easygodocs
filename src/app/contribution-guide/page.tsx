@@ -1,3 +1,5 @@
+import React from "react"; // Required for JSX scope
+
 export const metadata = {
     title: "Contribution Guide",
   };
@@ -9,8 +11,8 @@ export const metadata = {
           <h1>🤝 Contribution as Simple as Possible</h1>
   
           <p>
-            Welcome, contributor! Whether you're fixing typos, adding features, or just exploring,
-            you're already making EasyGoDocs better.
+            Welcome, contributor! Whether you&apos;re fixing typos, adding features, or just exploring,
+            you&apos;re already making EasyGoDocs better.
           </p>
   
           <hr />
@@ -20,7 +22,7 @@ export const metadata = {
   
           <hr />
   
-          <h2>⚠️ Don't Ignore This Section Like the One Above 😄</h2>
+          <h2>⚠️ Don&apos;t Ignore This Section Like the One Above 😄</h2>
   
           <h3>🗂 Folder Structure</h3>
           <pre>
@@ -106,14 +108,14 @@ export const metadata = {
             <li>Keep docs <strong>clear, concise, and consistent</strong>.</li>
             <li>Stick to the folder and DB structure.</li>
             <li>If you add new features, update related <code>.json</code> and <code>.tsx</code> files.</li>
-            <li><strong>Ask questions.</strong> We’re here to help you succeed!</li>
+            <li><strong>Ask questions.</strong> We&apos;re here to help you succeed!</li>
           </ul>
   
           <hr />
   
           <h2>❤️ Thank You!</h2>
           <p>
-            Thank you for making EasyGoDocs better. Every line of code and documentation moves us forward. You're amazing! 🚀
+            Thank you for making EasyGoDocs better. Every line of code and documentation moves us forward. You&apos;re amazing! 🚀
           </p>
         </article>
       </div>
