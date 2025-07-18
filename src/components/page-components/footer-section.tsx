@@ -4,7 +4,6 @@ import type { ComponentProps, ReactNode } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import {
   FacebookIcon,
-  FrameIcon,
   InstagramIcon,
   LinkedinIcon,
   YoutubeIcon,
