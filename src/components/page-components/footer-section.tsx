@@ -4,12 +4,12 @@ import type { ComponentProps, ReactNode } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import {
   FacebookIcon,
-  FrameIcon,
   InstagramIcon,
   LinkedinIcon,
   YoutubeIcon,
 } from "lucide-react";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 interface FooterLink {
   title: string;
@@ -60,6 +60,19 @@ const footerLinks: FooterSection[] = [
     ],
   },
 ];
+const Logo = ({ className }: { className?: string }) => (
+  <span className={cn("flex items-center gap-2", className)}>
+    <img
+      src="/easygodocs-logo.svg"
+      alt="EasyGoDocs logo"
+      width={40}
+      height={40}
+      className="rounded-full bg-white p-1"
+      style={{ display: "block" }}
+    />
+    <span className="text-balance font-semibold">EasyGoDocs.</span>
+  </span>
+);
 
 export function Footer() {
   return (
@@ -68,9 +81,9 @@ export function Footer() {
 
       <div className="grid w-full gap-8 xl:grid-cols-3 xl:gap-8">
         <AnimatedContainer className="space-y-4">
-          <FrameIcon className="size-8" />
+          <Logo/>
           <p className="text-muted-foreground mt-8 text-sm md:mt-0">
-            © {new Date().getFullYear()} Asme. All rights reserved.
+            © {new Date().getFullYear()} EasyGoDocs. All rights reserved.
           </p>
         </AnimatedContainer>
 
@@ -85,8 +98,14 @@ export function Footer() {
                       <Link
                         href={link.href}
                         className="hover:text-foreground inline-flex items-center transition-all duration-300"
-                        target={link.href.startsWith('http') ? '_blank' : undefined}
-                        rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                        target={
+                          link.href.startsWith("http") ? "_blank" : undefined
+                        }
+                        rel={
+                          link.href.startsWith("http")
+                            ? "noopener noreferrer"
+                            : undefined
+                        }
                       >
                         {link.icon && <link.icon className="me-1 size-4" />}
                         {link.title}
