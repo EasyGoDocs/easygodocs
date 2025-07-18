@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { useState, useEffect } from "react";
+import { DarkModeToggle } from "@/components/ui/dark-mode-toggle";
 
 const menuItems = [
   { name: "Features", href: "/features" },
@@ -16,19 +17,33 @@ const menuItems = [
   { name: "About", href: "/about" },
 ];
 
-const Logo = ({ className }: { className?: string }) => (
-  <span className={cn("flex items-center gap-2", className)}>
-    <img
-      src="/easygodocs-logo.svg"
-      alt="EasyGoDocs logo"
-      width={40}
-      height={40}
-      className="rounded-full bg-white p-1"
-      style={{ display: "block" }}
-    />
-    <span className="text-balance font-semibold">EasyGoDocs.</span>
-  </span>
-);
+const Logo = ({ className }: { className?: string }) => {
+  const [isDark, setIsDark] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkDark = () => {
+      setIsDark(document.documentElement.classList.contains("dark"));
+    };
+    checkDark();
+    const observer = new MutationObserver(checkDark);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <span className={cn("flex items-center gap-2", className)}>
+      <img
+        src={isDark ? "/easygodocs-logo-dark.svg" : "/easygodocs-logo.svg"}
+        alt="EasyGoDocs logo"
+        width={40}
+        height={40}
+        className={cn("rounded-full p-1", !isDark && "bg-white")}
+        style={{ display: "block" }}
+      />
+      <span className="text-balance font-semibold">EasyGoDocs.</span>
+    </span>
+  );
+};
 
 export const HeroHeader = () => {
   const [menuState, setMenuState] = useState(false);
@@ -122,6 +137,7 @@ export const HeroHeader = () => {
                 >
                   <FaXTwitter className="w-5 h-5 text-zinc-600 hover:text-zinc-800 transition-colors" />
                 </Link>
+                <DarkModeToggle />
                 <Button
                   asChild
                   size="sm"
