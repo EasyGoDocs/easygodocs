@@ -19,13 +19,13 @@ const menuItems = [
 
 const Logo = ({ className }: { className?: string }) => (
   <span className={cn("flex items-center gap-2", className)}>
-    <Image
-      src="https://placehold.co/100x100"
+    <img
+      src="/easygodocs-logo.svg"
       alt="EasyGoDocs logo"
       width={40}
       height={40}
-      className="rounded-full"
-      priority
+      className="rounded-full bg-white p-1"
+      style={{ display: "block" }}
     />
     <span className="text-balance font-semibold">EasyGoDocs.</span>
   </span>
