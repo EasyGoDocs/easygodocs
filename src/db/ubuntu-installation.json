@@ -1,0 +1,113 @@
+{
+  "sidebar": [
+    {
+      "title": "Ubuntu Installation",
+      "href": "#ubuntu-installation",
+      "children": [
+        { "title": "Requirements", "href": "#requirements" },
+        { "title": "Install Steps", "href": "#install-steps" },
+        { "title": "Post-Install", "href": "#post-install" }
+      ]
+    },
+    {
+      "title": "Troubleshooting",
+      "href": "#troubleshooting",
+      "children": [
+        { "title": "Common Issues", "href": "#common-issues" },
+        { "title": "Support", "href": "#support" }
+      ]
+    }
+  ],
+  "toc": [
+    { "id": "ubuntu-installation", "title": "Ubuntu Installation", "level": 1 },
+    { "id": "requirements", "title": "Requirements", "level": 2 },
+    { "id": "install-steps", "title": "Install Steps", "level": 2 },
+    { "id": "post-install", "title": "Post-Install", "level": 2 },
+    { "id": "troubleshooting", "title": "Troubleshooting", "level": 1 },
+    { "id": "common-issues", "title": "Common Issues", "level": 2 },
+    { "id": "support", "title": "Support", "level": 2 }
+  ],
+  "content": [
+    {
+      "type": "heading",
+      "id": "ubuntu-installation",
+      "level": 1,
+      "text": "Ubuntu Installation Guide"
+    },
+    {
+      "type": "paragraph",
+      "text": "This guide will walk you through installing EasyGoDocs on Ubuntu."
+    },
+    {
+      "type": "heading",
+      "id": "requirements",
+      "level": 2,
+      "text": "Requirements"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Ubuntu 20.04 or later",
+        "Node.js 18+",
+        "pnpm or npm",
+        "Git"
+      ]
+    },
+    {
+      "type": "heading",
+      "id": "install-steps",
+      "level": 2,
+      "text": "Install Steps"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "code": "# Clone the repository\ngit clone https://github.com/EasyGoDocs/easygodocs.git\ncd easygodocs\n\n# Install dependencies\npnpm install\n\n# Start the development server\npnpm run dev"
+    },
+    {
+      "type": "heading",
+      "id": "post-install",
+      "level": 2,
+      "text": "Post-Install"
+    },
+    {
+      "type": "paragraph",
+      "text": "After installation, open http://localhost:3000 in your browser to access EasyGoDocs."
+    },
+    {
+      "type": "heading",
+      "id": "troubleshooting",
+      "level": 1,
+      "text": "Troubleshooting"
+    },
+    {
+      "type": "heading",
+      "id": "common-issues",
+      "level": 2,
+      "text": "Common Issues"
+    },
+    {
+      "type": "paragraph",
+      "text": "If you encounter issues, ensure all requirements are met and dependencies are installed."
+    },
+    {
+      "type": "heading",
+      "id": "support",
+      "level": 2,
+      "text": "Support"
+    },
+    {
+      "type": "paragraph",
+      "text": "For further help, open an issue on our GitHub or join our community chat."
+    },
+    {
+      "type": "image",
+      "src": "https://placehold.co/1000x500",
+      "alt": "Ubuntu Installation Screenshot"
+    }
+  ],
+  "credits": {
+    "author": "EasyGoDocs Team",
+    "contributors": ["Jane Doe", "John Smith"]
+  }
+} 

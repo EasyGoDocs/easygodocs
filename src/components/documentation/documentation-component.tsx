@@ -235,7 +235,7 @@ const DocumentationPage = ({ jsonData }: DocumentationPageProps) => {
         </Sheet>
 
         {/* Desktop Sidebar */}
-        <aside className="hidden lg:flex lg:flex-col lg:w-80 lg:fixed lg:inset-y-0 lg:border-r lg:border-border lg:bg-background">
+        <aside className="hidden lg:flex lg:flex-col lg:w-80 lg:fixed lg:inset-y-0 lg:border-r lg:border-border lg:bg-background pt-20"> {/* Added pt-20 to avoid navbar overlap */}
           <div className="flex items-center h-16 px-6 border-b border-border">
             <h2 className="text-lg font-semibold text-foreground">
               Documentation
