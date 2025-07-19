@@ -31,18 +31,18 @@ const Logo = ({ className }: { className?: string }) => {
   }, []);
 
   return (
-    <span className={cn("flex items-center gap-2", className)}>
-      <img
+  <span className={cn("flex items-center gap-2", className)}>
+    <img
         src={isDark ? "/easygodocs-logo-dark.svg" : "/easygodocs-logo.svg"}
-        alt="EasyGoDocs logo"
-        width={40}
-        height={40}
+      alt="EasyGoDocs logo"
+      width={40}
+      height={40}
         className={cn("rounded-full p-1", !isDark && "bg-white")}
-        style={{ display: "block" }}
-      />
-      <span className="text-balance font-semibold">EasyGoDocs.</span>
-    </span>
-  );
+      style={{ display: "block" }}
+    />
+    <span className="text-balance font-semibold">EasyGoDocs.</span>
+  </span>
+);
 };
 
 export const HeroHeader = () => {
