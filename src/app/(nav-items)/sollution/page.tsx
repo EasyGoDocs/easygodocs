@@ -1,6 +1,6 @@
 import React from "react";
 import { AnimatedGroup } from "@/components/ui/animated-group";
-import { FileText, Sparkles, Users, Layers, Code, Eye, HeartHandshake, CheckCircle, Github, Globe, AlertTriangle, PlayCircle, RefreshCw } from "lucide-react";
+import { FileText, Sparkles, Users, Layers, Code, Eye, HeartHandshake, CheckCircle, Globe, AlertTriangle, PlayCircle, RefreshCw } from "lucide-react";
 import Link from "next/link";
 
 const solutionPairs = [
@@ -80,7 +80,7 @@ export default function SolutionPage() {
         </AnimatedGroup>
         {/* Problem/Solution Pairing Cards */}
         <AnimatedGroup preset="slide" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full mb-12">
-          {solutionPairs.map((pair, i) => (
+          {solutionPairs.map((pair) => (
             <div
               key={pair.problem}
               className={`relative flex flex-col h-full justify-between bg-card/80 rounded-2xl p-8 shadow-lg border border-border items-center text-center transition-transform duration-200 hover:-translate-y-2 hover:shadow-2xl`}

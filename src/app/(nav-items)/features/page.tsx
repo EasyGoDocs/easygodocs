@@ -1,6 +1,6 @@
 import React from "react";
 import { AnimatedGroup } from "@/components/ui/animated-group";
-import { FileText, Layers, Search, Eye, RefreshCw, Lock, Paintbrush, Sparkles, CheckCircle, Github, PlayCircle, FileJson, FileCode2 } from "lucide-react";
+import { Layers, Search, RefreshCw, Lock, Paintbrush, Sparkles, CheckCircle, PlayCircle, FileJson, FileCode2 } from "lucide-react";
 import Link from "next/link";
 
 const spotlightFeature = {

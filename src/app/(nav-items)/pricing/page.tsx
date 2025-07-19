@@ -1,6 +1,6 @@
 import React from "react";
 import { AnimatedGroup } from "@/components/ui/animated-group";
-import { BadgeCheck, Users, Code, Star, Sparkles, CheckCircle, ShieldCheck, Globe, Github } from "lucide-react";
+import { BadgeCheck, Users, Code, Star, Sparkles, CheckCircle, ShieldCheck, Github } from "lucide-react";
 import Link from "next/link";
 
 const pricingBenefits = [
