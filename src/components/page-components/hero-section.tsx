@@ -4,7 +4,6 @@ import Link from "next/link";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AnimatedGroup } from "@/components/ui/animated-group"; // For the X (Twitter) icon
-import { HeroHeader } from "../ui/header";
 
 const transitionVariants = {
   item: {
@@ -29,7 +28,7 @@ const transitionVariants = {
 export function HeroSection() {
   return (
     <>
-      <HeroHeader />
+      {/* <HeroHeader /> Removed to prevent double header */}
       <main className="overflow-hidden">
         <div
           aria-hidden
