@@ -5,7 +5,7 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { HeroHeader } from "@/components/ui/header";
 import { Footer } from "@/components/page-components/footer-section";
-import {Databuddy} from "@databuddy/sdk"
+import { Databuddy } from '@databuddy/sdk';
 const dmSans = DM_Sans({
   subsets: ["latin"],
 });
@@ -27,9 +27,9 @@ export default function RootLayout({
         <HeroHeader />
         {children}
         <Databuddy
-                clientId="w2muEC5fMcyhRncjyO380"
-                        enableBatching={true}
-                              />
+        clientId="tH13yVVCekicrW94BQ0us"
+        enableBatching={true}
+      />
         <Footer />
       </body>
     </html>
