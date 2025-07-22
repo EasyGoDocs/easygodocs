@@ -5,6 +5,7 @@ import { docs } from "@/constants/data";
 import CardDocs from "../ui/all-docs-card";
 import { truncateString } from "@/lib/utils";
 import Link from "next/link";
+import { BookOpen, GithubIcon } from "lucide-react";
 
 function AllDocs() {
   return (
@@ -21,13 +22,16 @@ function AllDocs() {
         </p>
         <span>
           Nothing to read on the previous line,{" "}
-          <Link href={"/contribution-guide"} className="font-semibold underline">
+          <Link
+            href={"/contribution-guide"}
+            className="font-semibold underline"
+          >
             Wanna Contribute to Our Docs?
           </Link>
         </span>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 justify-center mt-10">
         {docs.map((d, i) => (
           <span key={i}>
             <CardDocs
@@ -38,9 +42,13 @@ function AllDocs() {
           </span>
         ))}
         <CardDocs
-          title={"Coming Soon"}
-          desc={"There are more docs Coming Soon!"}
-          buttonTxt="Wait Faster"
+          icon={GithubIcon}
+          title={"More Docs Coming Soon!"}
+          desc={
+            "Want to contribute to our docs? Check out the contribution guide!"
+          }
+          buttonTxt="Contribute"
+          pro={true}
         />
       </div>
     </div>
