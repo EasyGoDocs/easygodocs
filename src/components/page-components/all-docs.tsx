@@ -5,7 +5,7 @@ import { docs } from "@/constants/data";
 import CardDocs from "../ui/all-docs-card";
 import { truncateString } from "@/lib/utils";
 import Link from "next/link";
-import { BookOpen, GithubIcon } from "lucide-react";
+import { GithubIcon } from "lucide-react";
 
 function AllDocs() {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardContent, CardFooter, CardHeader } from "./card";
+import { Card, CardContent, CardFooter } from "./card";
 import { Button } from "./button";
 import { cn } from "@/lib/utils";
 
