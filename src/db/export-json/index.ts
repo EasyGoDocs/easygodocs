@@ -1,9 +1,3 @@
-import fs from "fs";
-import path from "path";
-
-const dbDir = path.join(process.cwd(), "src/db");
-
-export const dbFiles = fs
-  .readdirSync(dbDir)
-  .filter((file) => file.endsWith(".json"))
-  .map((file) => JSON.parse(fs.readFileSync(path.join(dbDir, file), "utf-8")));
+// Re-export the auto-generated dbFiles array for documentation imports.
+// This file is a stable import target for the rest of the app.
+export { dbFiles } from "./db-index";
