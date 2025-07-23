@@ -29,15 +29,15 @@ export default function ContributionGuidePage() {
           </h2>
           <ol className="list-decimal pl-6 text-foreground space-y-2 text-left w-full max-w-xl mx-auto">
             <li><strong>Add a JSON file</strong> in <code>src/db/</code> (your doc’s data), e.g., <code>my-doc.json</code>.</li>
-            <li><strong>Add an entry</strong> to <code>src/db/docs-index.json</code> with the <code>title</code>, <code>description</code>, and <code>filename</code> (the <code>id</code> is optional for internal reference).</li>
-            <li><strong>Name the folder</strong> in <code>src/app/(main)/</code> as the <strong>kebab-case</strong> version of your title (e.g., <code>AI Introduction</code> → <code>ai-introduction</code>).</li>
-            <li><strong>Add a <code>page.tsx</code></strong> in that folder (see template below).</li>
-            <li><strong>Open a Pull Request</strong>—that’s it! The docs list will update automatically.</li>
+            <li><strong>Write your content</strong> in the JSON file, following the structure of other docs.</li>
+            <li><strong>Run <code>pnpm run build</code></strong> locally. This will generate the docs index so your new doc is included.</li>
+            <li><strong>Push your changes</strong> to the repository.</li>
+            <li><strong>Open a Pull Request</strong>—that’s it! The docs list will update automatically after the build.</li>
           </ol>
           <div className="bg-card rounded-lg p-3 border border-border mt-4 w-full">
             <span className="font-mono text-xs sm:text-sm">src/db/&lt;your-doc&gt;.json</span>
             <span className="mx-2 text-muted-foreground">→</span>
-            <span className="font-mono text-xs sm:text-sm">src/app/(main)/&lt;kebab-case-title&gt;/page.tsx</span>
+            <span className="font-mono text-xs sm:text-sm">pnpm run build</span>
           </div>
           <div className="bg-card rounded-lg p-3 border border-border mt-2 w-full">
             <pre className="bg-transparent text-xs sm:text-sm overflow-x-auto" aria-label="page.tsx example">
@@ -120,7 +120,7 @@ export default page;`}
         </h2>
         <div className="bg-card/80 rounded-2xl p-4 sm:p-8 shadow border border-border mb-4">
           <p className="mb-2"><strong>File:</strong> <code>&lt;your-doc&gt;.json</code></p>
-          <p className="text-muted-foreground">Each entry in <code>docs-index.json</code> should include:</p>
+          <p className="text-muted-foreground">Each doc file should include:</p>
           <ul className="list-disc pl-6 text-foreground">
             <li><code>title</code>: Section or topic title (used for the card and route)</li>
             <li><code>description</code>: Short summary for the card</li>
@@ -150,7 +150,7 @@ export default page;`}
           <li>Keep docs <strong>clear, short, and consistent</strong>.</li>
           <li>Stick to the folder and JSON structure.</li>
           <li>Use <strong>kebab-case</strong> for folder names (see above).</li>
-          <li>If you add new features, update related <code>.json</code> and <code>page.tsx</code> files.</li>
+          <li>If you add new features, update related <code>.json</code> and <code>page.tsx</code> files, then <strong>run <code>pnpm run build</code></strong> before pushing.</li>
           <li><strong>Ask questions.</strong> We’re here to help!</li>
         </ul>
       </section>
