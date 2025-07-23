@@ -1,4 +1,7 @@
 {
+  "id": "ubuntu-installation",
+  "title": "Ubuntu Installation",
+  "description": "How to install Ubuntu. This is a guide to install Ubuntu on your machine.",
   "sidebar": [
     {
       "title": "Ubuntu Installation",
@@ -46,12 +49,7 @@
     },
     {
       "type": "list",
-      "items": [
-        "Ubuntu 20.04 or later",
-        "Node.js 18+",
-        "pnpm or npm",
-        "Git"
-      ]
+      "items": ["Ubuntu 20.04 or later", "Node.js 18+", "pnpm or npm", "Git"]
     },
     {
       "type": "heading",
@@ -110,4 +108,4 @@
     "author": "EasyGoDocs Team",
     "contributors": ["Jane Doe", "John Smith"]
   }
-} 
+}

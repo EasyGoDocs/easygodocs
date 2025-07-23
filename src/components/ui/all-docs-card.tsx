@@ -1,9 +1,11 @@
 import React from "react";
 import { Card, CardContent, CardFooter } from "./card";
-import { Button } from "./button";
+import { buttonVariants } from "./button";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 interface CardContent {
+  id: string;
   title: string;
   desc: string;
   buttonTxt: string;
@@ -14,6 +16,7 @@ interface CardContent {
 }
 
 function CardDocs({
+  id,
   title,
   desc,
   buttonTxt,
@@ -55,10 +58,17 @@ function CardDocs({
           </span>
         )}
       </div>
-      <CardFooter className="p-0 mt-6 w-full">
-        <Button className="w-full py-2 px-4 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-white font-semibold text-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-zinc-900 dark:border">
+      <CardFooter className="p-0 mt-6 w-full flex justify-end md:justify-center">
+        <Link
+          href={`/${id}`}
+          className={cn(
+            buttonVariants({
+              className: "md:w-full",
+            })
+          )}
+        >
           {buttonTxt}
-        </Button>
+        </Link>
       </CardFooter>
     </Card>
   );
