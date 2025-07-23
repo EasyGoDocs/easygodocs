@@ -1,21 +1,9 @@
-"use client";
-
 import React from "react";
-import docsIndex from "@/db/docs-index.json";
+
 import CardDocs from "../ui/all-docs-card";
-import { truncateString } from "@/lib/utils";
 import Link from "next/link";
 import { GithubIcon } from "lucide-react";
-
-// Utility to convert a string to kebab-case
-function toKebabCase(str: string) {
-  return str
-    .toLowerCase()
-    .replace(/[^a-z0-9\s]/g, "") // remove special chars
-    .replace(/\s+/g, "-")         // spaces to hyphens
-    .replace(/-+/g, "-")          // collapse multiple hyphens
-    .replace(/^-+|-+$/g, "");     // trim hyphens
-}
+import { dbFiles } from "@/db/export-json/index";
 
 function AllDocs() {
   return (
@@ -42,23 +30,20 @@ function AllDocs() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 justify-center mt-10">
-        {docsIndex.map((d, i) => {
-          const kebabTitle = toKebabCase(d.title);
+        {dbFiles.map((d, i) => {
           return (
             <span key={i}>
-              <Link href={`/(main)/${kebabTitle}`} passHref legacyBehavior>
-                <a style={{ textDecoration: 'none' }}>
-                  <CardDocs
-                    title={d.title}
-                    desc={truncateString(d.description)}
-                    buttonTxt="Read More"
-                  />
-                </a>
-              </Link>
+              <CardDocs
+                id={d.id}
+                title={d.title}
+                desc={d.description}
+                buttonTxt="Read More"
+              />
             </span>
           );
         })}
         <CardDocs
+          id={"contribution-guide"}
           icon={GithubIcon}
           title={"More Docs Coming Soon!"}
           desc={

@@ -1,7 +1,7 @@
 {
-  "id": "ai-introduction-db",
-  "title": "AI Introduction",
-  "description": "Learn the basics of AI. This is a guide to learn the basics of AI.",
+  "id": "better-auth-db",
+  "title": "Better Auth",
+  "description": "Better Auth is a modern authentication solution for your Next.js application.",
   "sidebar": [
     {
       "title": "Getting Started",
@@ -46,9 +46,8 @@
       "text": "Installation"
     },
     {
-      "type": "code",
-      "language": "bash",
-      "code": "pnpm add better-auth"
+      "type": "paragraph",
+      "text": "To install Better Auth, you need to have Node.js and npm installed. You can download them from [Node.js](https://nodejs.org/en/download/) and [npm](https://www.npmjs.com/get-npm)."
     },
     {
       "type": "heading",
@@ -58,47 +57,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Import the package and use it in your Next.js project."
-    },
-    {
-      "type": "code",
-      "language": "js",
-      "code": "import { AuthProvider } from 'better-auth'\n\nexport default function App() {\n  return <AuthProvider>...</AuthProvider>\n}"
-    },
-    {
-      "type": "heading",
-      "id": "api-reference",
-      "level": 1,
-      "text": "API Reference"
-    },
-    {
-      "type": "heading",
-      "id": "authentication",
-      "level": 2,
-      "text": "Authentication"
-    },
-    {
-      "type": "paragraph",
-      "text": "Use the AuthProvider to wrap your application and provide authentication context."
-    },
-    {
-      "type": "heading",
-      "id": "users",
-      "level": 2,
-      "text": "Users"
-    },
-    {
-      "type": "paragraph",
-      "text": "You can access the current user via the useAuth hook."
-    },
-    {
-      "type": "image",
-      "src": "https://placehold.co/1000x500",
-      "alt": "Example screenshot"
+      "text": "To get started with Better Auth, you need to have Node.js and npm installed. You can download them from [Node.js](https://nodejs.org/en/download/) and [npm](https://www.npmjs.com/get-npm)."
     }
-  ],
-  "credits": {
-    "author": "Jane Doe",
-    "contributors": ["John Smith", "Alice Johnson"]
-  }
+  ]
 }
