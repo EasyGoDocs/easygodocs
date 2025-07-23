@@ -64,7 +64,7 @@ export default function PricingPage() {
         <Star className="w-96 h-96 text-primary/20" />
       </div>
 
-      <div className="mx-auto max-w-6xl px-6 w-full flex flex-col items-center text-center relative z-10">
+      <div className="mx-auto max-w-7xl px-6 w-full flex flex-col items-center text-center relative z-10">
         {/* Heading */}
         <AnimatedGroup preset="fade" className="mb-12">
           <h1 className="text-balance text-4xl md:text-7xl xl:text-[4rem] mb-6">

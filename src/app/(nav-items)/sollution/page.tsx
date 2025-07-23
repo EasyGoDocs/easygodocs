@@ -68,7 +68,7 @@ export default function SolutionPage() {
         <Sparkles className="w-96 h-96 text-primary/20" />
       </div>
 
-      <div className="mx-auto max-w-6xl px-6 w-full flex flex-col items-center text-center relative z-10">
+      <div className="mx-auto max-w-7xl px-6 w-full flex flex-col items-center text-center relative z-10">
         {/* Heading */}
         <AnimatedGroup preset="fade" className="mb-12">
           <h1 className="text-balance text-4xl md:text-7xl xl:text-[4rem] mb-6">
@@ -87,7 +87,7 @@ export default function SolutionPage() {
             >
               <pair.icon className="h-10 w-10 text-primary mb-4" />
               <div className="flex flex-col flex-1 w-full">
-                <span className="text-red-500 font-bold text-base mb-2 flex items-center justify-center gap-1">
+                <span className="text-foreground font-bold text-base mb-2 flex items-center justify-center gap-1">
                   {pair.problem}
                 </span>
                 <div className="border-b border-border w-2/3 mx-auto my-2 opacity-40" />
