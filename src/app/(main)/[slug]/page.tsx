@@ -2,9 +2,16 @@ import DocumentationPage from "@/components/documentation/documentation-componen
 import { dbFiles } from "@/db/export-json/index";
 import React from "react";
 
-function page({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
   const doc = dbFiles.find((doc) => doc.id === slug);
+
+  console.log(slug);
+
   if (!doc) {
     return <div>Document not found</div>;
   }
@@ -14,5 +21,3 @@ function page({ params }: { params: { slug: string } }) {
     </div>
   );
 }
-
-export default page;
