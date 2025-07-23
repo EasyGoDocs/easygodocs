@@ -1,0 +1,104 @@
+{
+  "id": "vercel-build-error",
+  "title": "Vercel Build Error",
+  "description": "How to troubleshoot and fix build errors when deploying your Next.js project to Vercel.",
+  "sidebar": [
+    {
+      "title": "Vercel Build Error Guide",
+      "href": "#vercel-build-error-guide",
+      "children": [
+        { "title": "Common Causes", "href": "#common-causes" },
+        { "title": "How to Fix", "href": "#how-to-fix" },
+        { "title": "Best Practices", "href": "#best-practices" }
+      ]
+    },
+    {
+      "title": "More Help",
+      "href": "#more-help",
+      "children": [
+        { "title": "Support", "href": "#support" }
+      ]
+    }
+  ],
+  "toc": [
+    { "id": "vercel-build-error-guide", "title": "Vercel Build Error Guide", "level": 1 },
+    { "id": "common-causes", "title": "Common Causes", "level": 2 },
+    { "id": "how-to-fix", "title": "How to Fix", "level": 2 },
+    { "id": "best-practices", "title": "Best Practices", "level": 2 },
+    { "id": "more-help", "title": "More Help", "level": 1 },
+    { "id": "support", "title": "Support", "level": 2 }
+  ],
+  "content": [
+    {
+      "type": "heading",
+      "id": "vercel-build-error-guide",
+      "level": 1,
+      "text": "Vercel Build Error Guide"
+    },
+    {
+      "type": "paragraph",
+      "text": "This guide will help you troubleshoot and resolve build errors when deploying your Next.js project to Vercel."
+    },
+    {
+      "type": "heading",
+      "id": "common-causes",
+      "level": 2,
+      "text": "Common Causes"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Using Node.js modules like 'fs' or 'path' at runtime",
+        "Missing or misconfigured environment variables",
+        "Build script errors or missing dependencies",
+        "Incorrect Next.js configuration"
+      ]
+    },
+    {
+      "type": "heading",
+      "id": "how-to-fix",
+      "level": 2,
+      "text": "How to Fix"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Replace all runtime 'fs' and 'path' usage with static imports or build-time scripts.",
+        "Check your environment variables in the Vercel dashboard.",
+        "Ensure all dependencies are listed in package.json.",
+        "Review your next.config.js for any server-only code."
+      ]
+    },
+    {
+      "type": "heading",
+      "id": "best-practices",
+      "level": 2,
+      "text": "Best Practices"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Use build-time scripts to generate any dynamic code needed for your app.",
+        "Keep your JSON and static assets in the project root or public folder.",
+        "Test your build locally with 'next build' before deploying."
+      ]
+    },
+    {
+      "type": "heading",
+      "id": "more-help",
+      "level": 1,
+      "text": "More Help"
+    },
+    {
+      "type": "heading",
+      "id": "support",
+      "level": 2,
+      "text": "Support"
+    },
+    {
+      "type": "paragraph",
+      "text": "If you need further assistance, check the Vercel documentation or open an issue on your project's GitHub repository."
+    }
+  ]
+}
+  
