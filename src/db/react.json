@@ -1,0 +1,127 @@
+{
+  "id": "react",
+  "title": "React",
+  "description": "A beginner-friendly introduction and guide to React, the popular JavaScript library for building user interfaces.",
+  "sidebar": [
+    {
+      "title": "React Guide",
+      "href": "#react-guide",
+      "children": [
+        { "title": "What is React?", "href": "#what-is-react" },
+        { "title": "Getting Started", "href": "#getting-started" },
+        { "title": "Core Concepts", "href": "#core-concepts" },
+        { "title": "Best Practices", "href": "#best-practices" }
+      ]
+    },
+    {
+      "title": "More Help",
+      "href": "#more-help",
+      "children": [
+        { "title": "Resources", "href": "#resources" }
+      ]
+    }
+  ],
+  "toc": [
+    { "id": "react-guide", "title": "React Guide", "level": 1 },
+    { "id": "what-is-react", "title": "What is React?", "level": 2 },
+    { "id": "getting-started", "title": "Getting Started", "level": 2 },
+    { "id": "core-concepts", "title": "Core Concepts", "level": 2 },
+    { "id": "best-practices", "title": "Best Practices", "level": 2 },
+    { "id": "more-help", "title": "More Help", "level": 1 },
+    { "id": "resources", "title": "Resources", "level": 2 }
+  ],
+  "content": [
+    {
+      "type": "heading",
+      "id": "react-guide",
+      "level": 1,
+      "text": "React Guide"
+    },
+    {
+      "type": "paragraph",
+      "text": "Welcome to the React documentation! This guide will help you understand the basics of React and how to get started building user interfaces."
+    },
+    {
+      "type": "heading",
+      "id": "what-is-react",
+      "level": 2,
+      "text": "What is React?"
+    },
+    {
+      "type": "paragraph",
+      "text": "React is a popular open-source JavaScript library for building user interfaces, especially single-page applications. It lets you compose complex UIs from small, isolated pieces of code called 'components'."
+    },
+    {
+      "type": "heading",
+      "id": "getting-started",
+      "level": 2,
+      "text": "Getting Started"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Install Node.js and npm",
+        "Create a new React app using Create React App: npx create-react-app my-app",
+        "Navigate to your app folder: cd my-app",
+        "Start the development server: npm start"
+      ]
+    },
+    {
+      "type": "heading",
+      "id": "core-concepts",
+      "level": 2,
+      "text": "Core Concepts"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Components: The building blocks of React UIs.",
+        "JSX: A syntax extension for writing UI markup in JavaScript.",
+        "Props: Data passed to components.",
+        "State: Data managed within a component.",
+        "Hooks: Functions that let you use state and other React features."
+      ]
+    },
+    {
+      "type": "heading",
+      "id": "best-practices",
+      "level": 2,
+      "text": "Best Practices"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Keep components small and focused.",
+        "Use functional components and hooks.",
+        "Lift state up when needed.",
+        "Use keys for list rendering.",
+        "Write reusable and testable code."
+      ]
+    },
+    {
+      "type": "heading",
+      "id": "more-help",
+      "level": 1,
+      "text": "More Help"
+    },
+    {
+      "type": "heading",
+      "id": "resources",
+      "level": 2,
+      "text": "Resources"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Official React Docs: https://react.dev/",
+        "React Tutorial: https://react.dev/learn",
+        "React GitHub: https://github.com/facebook/react"
+      ]
+    }
+  ],
+  "credits": {
+    "author": "EasyGoDocs Team",
+    "contributors": ["Jane Doe", "John Smith"]
+  }
+}
+  
