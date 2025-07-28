@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "pnpm run generate-db-index && next build",
+    "build": "pnpm run generate-db-index && pnpm run generate-mdx-routes && next build",
     "start": "next start",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
-    "generate-db-index": "node scripts/generate-db-index.cjs"
+    "generate-db-index": "node scripts/generate-db-index.cjs",
+    "generate-mdx-routes": "node scripts/generate-mdx-routes.cjs"
   },
   "dependencies": {
     "@databuddy/sdk": "^1.4.0",
