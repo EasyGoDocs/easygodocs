@@ -1,0 +1,10 @@
+{
+  "buildCommand": "pnpm run build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "functions": {
+    "src/app/(main)/mdx/[slug]/page.tsx": {
+      "maxDuration": 30
+    }
+  }
+} 

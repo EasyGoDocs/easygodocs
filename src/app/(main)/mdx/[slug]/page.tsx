@@ -3,23 +3,35 @@ import { extractHeadings } from '@/lib/mdx-headings';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import React from 'react';
 import Link from 'next/link';
+import fs from 'fs';
+import path from 'path';
 
-function slugToFilename(slug: string) {
-  return `${slug}.mdx`;
+// Generate static params for all MDX files
+export async function generateStaticParams() {
+  const docsDirectory = path.join(process.cwd(), 'src/docs');
+  const filenames = fs.readdirSync(docsDirectory);
+  
+  return filenames
+    .filter(filename => filename.endsWith('.mdx'))
+    .map(filename => ({
+      slug: filename.replace(/\.mdx$/, ''),
+    }));
 }
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  // Use dynamic import to avoid fs/path issues in Next.js app dir
-  const fs = (await import('fs')).default;
-  const path = (await import('path')).default;
-  const filePath = path.join(process.cwd(), 'src/docs', slugToFilename(slug));
+  
+  // Read the MDX file
+  const filePath = path.join(process.cwd(), 'src/docs', `${slug}.mdx`);
   let source = '';
+  
   try {
     source = fs.readFileSync(filePath, 'utf8');
-  } catch {
+  } catch (error) {
+    console.error(`Failed to load MDX file: ${filePath}`, error);
     return notFound();
   }
+
   const headings = await extractHeadings(source);
 
   return (
