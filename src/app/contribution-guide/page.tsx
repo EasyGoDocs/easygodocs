@@ -5,6 +5,7 @@ import {
   FaRegFolderOpen,
 } from "react-icons/fa";
 import { Heart, FileText } from "lucide-react";
+import Link from "next/link";
 
 export const metadata = {
   title: "Contribution Guide",
@@ -259,7 +260,10 @@ See [the official guide](https://example.com) for more details.
           </p>
           <p className="text-blue-700 dark:text-blue-300 text-sm">
             The old JSON-based method is still supported for existing docs, but new contributions 
-            should use the MDX approach described above.
+            should use the MDX approach described above.{" "}
+            <Link href="/contribution-guide/legacy-json" className="underline hover:text-blue-600">
+              Learn about the legacy JSON method
+            </Link>.
           </p>
         </div>
       </section>
