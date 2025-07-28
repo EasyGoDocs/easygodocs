@@ -45,7 +45,7 @@ export function MvpPromoSection() {
         <div className="flex-1 w-full grid grid-cols-1 gap-8 md:grid-cols-1 xl:grid-cols-1">
           <div className="flex flex-col gap-8">
             <div className="bg-card/80 rounded-2xl p-8 shadow-lg border border-border transition-transform hover:-translate-y-2 hover:shadow-2xl duration-200">
-              <Rocket className="h-10 w-10 text-black mb-4" />
+              <Rocket className="h-10 w-10 text-black mb-4 dark:text-white" />
               <h3 className="text-xl font-semibold text-foreground mb-2">
                 Instant Launch
               </h3>
@@ -55,7 +55,7 @@ export function MvpPromoSection() {
               </p>
             </div>
             <div className="bg-card/80 rounded-2xl p-8 shadow-lg border border-border transition-transform hover:-translate-y-2 hover:shadow-2xl duration-200">
-              <Zap className="h-10 w-10 text-black mb-4 " />
+              <Zap className="h-10 w-10 text-black mb-4 dark:text-white" />
               <h3 className="text-xl font-semibold text-foreground mb-2">
                 Supercharged Features
               </h3>
@@ -65,7 +65,7 @@ export function MvpPromoSection() {
               </p>
             </div>
             <div className="bg-card/80 rounded-2xl p-8 shadow-lg border border-border transition-transform hover:-translate-y-2 hover:shadow-2xl duration-200">
-              <Layers className="h-10 w-10 text-black mb-4 " />
+              <Layers className="h-10 w-10 text-black mb-4 dark:text-white" />
               <h3 className="text-xl font-semibold text-foreground mb-2">
                 Effortless Scaling
               </h3>
