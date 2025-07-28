@@ -187,6 +187,8 @@ More detailed information...
 
 For more details, see the [Contribution Guide](./src/app/contribution-guide/page.tsx).
 
+> **Note:** We also maintain a [Legacy JSON Contribution Guide](./src/app/contribution-guide/legacy-json/page.tsx) for users who need to understand or work with the old JSON-based system.
+
 ---
 
 ## 💡 Why EasyGoDocs?
