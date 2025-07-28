@@ -4,7 +4,7 @@ import {
   FaRegCheckCircle,
   FaRegFolderOpen,
 } from "react-icons/fa";
-import { Github, Heart } from "lucide-react";
+import { Heart, FileText } from "lucide-react";
 
 export const metadata = {
   title: "Contribution Guide",
@@ -19,15 +19,15 @@ export default function ContributionGuidePage() {
       {/* Hero Section */}
       <section className="w-full mb-12 text-center space-y-4 mt-12">
         <div className="inline-flex items-center justify-center border-2 shadow-md rounded-full p-2">
-          <Github className="text-primary size-10" aria-hidden="true" />
+          <FileText className="text-primary size-10" aria-hidden="true" />
         </div>
         <h1 className="text-balance text-4xl md:text-7xl xl:text-[4.25rem]">
-          Contribute in Minutes. Docs for Everyone.
+          Write Docs in Markdown. That&apos;s It!
         </h1>
         <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto font-medium">
           Anyone can help make{" "}
           <span className="font-bold text-foreground">EasyGoDocs</span> better.
-          Fix a typo, add a doc, or just explore. Every contribution counts!
+          Just write in Markdown and we&apos;ll handle the rest!
         </p>
       </section>
 
@@ -36,98 +36,110 @@ export default function ContributionGuidePage() {
         <div className="bg-muted border rounded-2xl p-6 sm:p-8 shadow flex flex-col gap-4">
           <h2 className="text-xl sm:text-2xl font-bold mb-2 flex items-center gap-2">
             <FaRegCheckCircle className="text-primary" aria-hidden="true" />
-            How to Add or Update Docs
+            How to Add Documentation (3 Simple Steps)
           </h2>
           <ol className="list-decimal pl-6 text-foreground space-y-2">
             <li>
-              <strong>Add a JSON file</strong> in <code>src/db/</code> (your
-              doc’s data), e.g., <code>my-doc.json</code>.
+              <strong>Create a new .mdx file</strong> in <code>src/docs/</code> (e.g., <code>my-topic.mdx</code>).
             </li>
             <li>
-              <strong>Write your content</strong> in the JSON file, following
-              the structure of other docs.
+              <strong>Write your content</strong> using Markdown headings (<code>#</code>, <code>##</code>, etc.), lists, links, and even React components.
             </li>
             <li>
-              Run{" "}
-              <code className="border border-neutral-300 px-2 py-[2px] rounded-md bg-neutral-200 dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-300">
-                pnpm run build
-              </code>{" "}
-              locally. This will generate the docs index so your new doc is
-              included.
-            </li>
-            <li>
-              <strong>Push your changes</strong> to the repository.
-            </li>
-            <li>
-              <strong>Open a Pull Request</strong>—that’s it! The docs list will
-              update automatically after the build.
+              <strong>Open a Pull Request</strong>—that&apos;s it! Your doc will be available at <code>/mdx/my-topic</code>.
             </li>
           </ol>
           <div className="bg-card rounded-lg p-3 border border-border mt-4 w-full">
             <span className="font-mono text-xs sm:text-sm">
-              src/db/&lt;your-doc&gt;.json
+              src/docs/&lt;your-topic&gt;.mdx
             </span>
             <span className="mx-2 text-muted-foreground">→</span>
-            <span className="font-mono text-xs sm:text-sm">pnpm run build</span>
-          </div>
-          <div className="bg-card rounded-lg p-3 border border-border mt-2 w-full">
-            <pre
-              className="bg-transparent text-xs sm:text-sm overflow-x-auto"
-              aria-label="page.tsx example"
-            >
-              {`// src/app/(main)/<kebab-case-title>/page.tsx
-import DocumentationPage from "@/components/documentation/documentation-component";
-import docData from "@/db/<your-doc>.json";
-import React from "react";
-
-function page() {
-  return (
-    <div>
-      <DocumentationPage jsonData={docData} />
-    </div>
-  );
-}
-
-export default page;`}
-            </pre>
+            <span className="font-mono text-xs sm:text-sm">/mdx/&lt;your-topic&gt;</span>
           </div>
         </div>
       </section>
 
-      {/* Kebab-case Naming Rule Section */}
+      {/* Example Section */}
       <section className="w-full mb-10">
         <h2 className="text-xl sm:text-2xl font-bold mb-2 flex items-center gap-2">
           <FaRegLightbulb
             className="text-muted-foreground"
             aria-hidden="true"
           />
-          Folder & Route Naming: Kebab-case Rule
+          Example Documentation
         </h2>
         <div className="bg-card/80 rounded-2xl p-4 sm:p-8 shadow border border-border mb-4">
-          <p className="mb-2">
-            The folder name in <code>src/app/(main)/</code> and the route for
-            your doc are automatically generated from the <code>title</code> in{" "}
-            <code>docs-index.json</code> by converting it to{" "}
-            <strong>kebab-case</strong> (all lowercase, spaces to hyphens,
-            special characters removed).
+          <p className="mb-4">
+            Here&apos;s a simple example of what your <code>.mdx</code> file should look like:
           </p>
-          <ul className="list-disc pl-6 text-foreground">
+          <pre
+            className="bg-muted border rounded-lg p-4 text-xs sm:text-sm overflow-x-auto"
+            aria-label="MDX example"
+          >
+{`# My Topic
+
+Welcome to my documentation!
+
+## Getting Started
+
+- Step 1: Install the package
+- Step 2: Configure settings
+- Step 3: Start building
+
+## Advanced Usage
+
+You can use **bold text**, *italic text*, and \`code snippets\`.
+
+### Code Example
+
+\`\`\`javascript
+function hello() {
+  console.log("Hello, world!");
+}
+\`\`\`
+
+## More Information
+
+See [the official guide](https://example.com) for more details.
+
+---
+
+**Author:** Your Name  
+**Contributors:** Team Members`}
+          </pre>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="w-full mb-10">
+        <h2 className="text-xl sm:text-2xl font-bold mb-2 flex items-center gap-2">
+          <FaRegLightbulb
+            className="text-muted-foreground"
+            aria-hidden="true"
+          />
+          What You Get Automatically
+        </h2>
+        <div className="bg-card/80 rounded-2xl p-4 sm:p-8 shadow border border-border">
+          <ul className="list-disc pl-6 text-foreground space-y-2">
             <li>
-              <code>AI Introduction</code> → <code>ai-introduction</code>
+              <strong>Table of Contents:</strong> Generated automatically from your headings
             </li>
             <li>
-              <code>Ubuntu Installation</code> →{" "}
-              <code>ubuntu-installation</code>
+              <strong>Sidebar Navigation:</strong> Your doc appears in the docs list automatically
             </li>
             <li>
-              <code>Docker & Kubernetes</code> → <code>docker-kubernetes</code>
+              <strong>Responsive Design:</strong> Looks great on all devices
+            </li>
+            <li>
+              <strong>Syntax Highlighting:</strong> Code blocks are automatically styled
+            </li>
+            <li>
+              <strong>Dark Mode Support:</strong> Works with the site&apos;s theme
+            </li>
+            <li>
+              <strong>Search Integration:</strong> Your content is searchable
             </li>
           </ul>
-          <p className="mt-2">
-            This ensures the <strong>Read More</strong> button on the docs list
-            always links to the correct page. Just make sure your folder name
-            matches the kebab-case version of your title!
-          </p>
         </div>
       </section>
 
@@ -138,82 +150,63 @@ export default page;`}
             className="text-muted-foreground"
             aria-hidden="true"
           />
-          Project Folders (Where Things Go)
+          Project Structure
         </h2>
         <div className="bg-card/80 rounded-2xl p-4 sm:p-8 shadow border border-border">
           <pre
             className="bg-transparent text-xs sm:text-sm overflow-x-auto"
             aria-label="Project folder structure"
           >
-            {`├── public
-│   └── logoIcon.png
-├── README.md
-├── src
-│   ├── app
-│   │   ├── all-docs
-│   │   │   ├── layout.tsx
-│   │   │   └── page.tsx
-│   │   ├── contribution-guide
-│   │   │   └── page.tsx
-│   │   ├── (main)
-│   │   │   └── <kebab-case-title>
-│   │   │       └── page.tsx
-│   ├── components
-│   │   └── documentation
-│   │       └── documentation-component.tsx
-│   ├── db
-│   │   ├── <your-doc>.json
-│   │   └── docs-index.json
-│   └── lib
-│       └── utils.ts`}
+{`├── src/
+│   ├── docs/                    # 📁 Your MDX files go here
+│   │   ├── react.mdx           # ✅ Example: /mdx/react
+│   │   ├── my-topic.mdx        # ➕ Your new doc: /mdx/my-topic
+│   │   └── ...
+│   ├── app/
+│   │   └── (main)/
+│   │       └── mdx/
+│   │           └── [slug]/
+│   │               └── page.tsx # 🚀 Renders your MDX files
+│   └── components/
+│       └── documentation/       # 🧩 UI components for docs
+└── package.json`}
           </pre>
         </div>
       </section>
 
-      {/* JSON Structure Section */}
+      {/* MDX Features Section */}
       <section className="w-full mb-10">
         <h2 className="text-xl sm:text-2xl font-bold mb-2 flex items-center gap-2">
           <FaRegLightbulb
             className="text-muted-foreground"
             aria-hidden="true"
           />
-          How Docs Data Works
+          MDX Features You Can Use
         </h2>
-        <div className="bg-card/80 rounded-2xl p-4 sm:p-8 shadow border border-border mb-4">
-          <p className="mb-2">
-            <strong>File:</strong> <code>&lt;your-doc&gt;.json</code>
-          </p>
-          <p className="text-muted-foreground">Each doc file should include:</p>
-          <ul className="list-disc pl-6 text-foreground">
-            <li>
-              <code>title</code>: Section or topic title (used for the card and
-              route)
-            </li>
-            <li>
-              <code>description</code>: Short summary for the card
-            </li>
-            <li>
-              <code>filename</code>: The JSON file name in <code>src/db/</code>
-            </li>
-            <li>
-              <code>id</code>: (optional) Internal reference
-            </li>
-          </ul>
-        </div>
-        <p className="font-semibold mb-1">
-          Example <code>docs-index.json</code> entry:
-        </p>
-        <div className="bg-card/80 rounded-xl p-4 sm:p-8 shadow border border-border">
-          <pre
-            className="bg-transparent text-xs sm:text-sm overflow-x-auto"
-            aria-label="docs-index.json example"
-          >
-            {`{
-  "title": "Getting Started",
-  "description": "Initialize your documentation project with a single command.",
-  "filename": "getting-started.json"
-}`}
-          </pre>
+        <div className="bg-card/80 rounded-2xl p-4 sm:p-8 shadow border border-border">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <h3 className="font-semibold mb-2">Markdown Features</h3>
+              <ul className="list-disc pl-6 text-sm space-y-1">
+                <li>Headings (<code>#</code>, <code>##</code>, etc.)</li>
+                <li>Lists (ordered and unordered)</li>
+                <li>Links and images</li>
+                <li>Code blocks with syntax highlighting</li>
+                <li>Tables</li>
+                <li>Blockquotes</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">React Components</h3>
+              <ul className="list-disc pl-6 text-sm space-y-1">
+                <li>Interactive components</li>
+                <li>Custom UI elements</li>
+                <li>Embedded demos</li>
+                <li>Dynamic content</li>
+                <li>Custom styling</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -230,36 +223,57 @@ export default page;`}
         </div>
         <ul className="list-disc pl-6 text-muted-foreground space-y-1">
           <li>
-            Keep docs <strong>clear, short, and consistent</strong>.
-          </li>
-          <li>Stick to the folder and JSON structure.</li>
-          <li>
-            Use <strong>kebab-case</strong> for folder names (see above).
+            Use <strong>descriptive filenames</strong> (e.g., <code>docker-setup.mdx</code>).
           </li>
           <li>
-            If you add new features, update related <code>.json</code> and{" "}
-            <code>page.tsx</code> files, then{" "}
-            <strong>
-              run <code>pnpm run build</code>
-            </strong>{" "}
-            before pushing.
+            Start with a clear <strong>H1 heading</strong> that describes your topic.
           </li>
           <li>
-            <strong>Ask questions.</strong> We’re here to help!
+            Use <strong>H2 and H3 headings</strong> to organize your content logically.
+          </li>
+          <li>
+            Include <strong>code examples</strong> with proper syntax highlighting.
+          </li>
+          <li>
+            Add <strong>links to related resources</strong> and official documentation.
+          </li>
+          <li>
+            Keep your content <strong>clear, concise, and beginner-friendly</strong>.
+          </li>
+          <li>
+            <strong>Test your MDX locally</strong> before submitting a PR.
           </li>
         </ul>
+      </section>
+
+      {/* Migration Notice */}
+      <section className="w-full mb-10">
+        <div className="bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-800 rounded-2xl p-4 sm:p-8">
+          <h2 className="text-xl sm:text-2xl font-bold mb-2 flex items-center gap-2 text-blue-900 dark:text-blue-100">
+            <FaRegLightbulb className="text-blue-600" aria-hidden="true" />
+            🆕 New Contribution Method
+          </h2>
+          <p className="text-blue-800 dark:text-blue-200 mb-2">
+            We&apos;ve simplified the contribution process! Instead of creating JSON files and page components, 
+            you can now just write Markdown/MDX files. This makes it much easier for everyone to contribute.
+          </p>
+          <p className="text-blue-700 dark:text-blue-300 text-sm">
+            The old JSON-based method is still supported for existing docs, but new contributions 
+            should use the MDX approach described above.
+          </p>
+        </div>
       </section>
 
       {/* Thank You Section */}
       <section className="w-full  text-center mt-16 mb-8">
         <h2 className="text-2xl sm:text-3xl font-extrabold mb-4 flex items-center justify-center gap-2">
           <Heart className="inline text-primary h-7 w-7" aria-hidden="true" />
-          You’re Awesome!
+          You&apos;re Awesome!
         </h2>
         <p className="text-base sm:text-lg text-muted-foreground font-medium">
           Thanks for making{" "}
           <span className="font-bold text-foreground">EasyGoDocs</span> better.
-          Every line of code and doc moves us forward. 🚀
+          Every line of documentation helps the community! 🚀
         </p>
       </section>
     </div>
