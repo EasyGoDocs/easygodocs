@@ -49,7 +49,7 @@ export default function ContributionGuidePage() {
             </li>
             <li>
               Run{" "}
-              <code className="border border-neutral-300 px-2 py-[2px] rounded-md bg-neutral-200">
+              <code className="border border-neutral-300 px-2 py-[2px] rounded-md bg-neutral-200 dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-300">
                 pnpm run build
               </code>{" "}
               locally. This will generate the docs index so your new doc is
