@@ -93,16 +93,16 @@ export default function FeaturesPage() {
         </AnimatedGroup>
         {/* Spotlight Feature */}
         <AnimatedGroup preset="slide" className="mb-16 w-full max-w-3xl mx-auto">
-          <div className="relative flex flex-col h-full justify-between bg-gradient-to-br from-primary/90 to-primary/60 rounded-2xl p-10 shadow-xl border-2 border-primary items-center text-center text-white">
+          <div className="relative flex flex-col h-full justify-between bg-gradient-to-br from-primary/90 to-primary/60 dark:from-primary/80 dark:to-primary/60 rounded-2xl p-10 shadow-xl border-2 border-primary items-center text-center text-white dark:text-white">
             <spotlightFeature.icon className="h-12 w-12 mb-4" />
-            <span className="absolute top-4 right-4 bg-white/90 text-primary text-xs font-bold px-3 py-1 rounded-full shadow-md z-10">
+            <span className="absolute top-4 right-4 bg-white/90 text-primary text-xs font-bold px-3 py-1 rounded-full shadow-md z-10 dark:bg-background dark:text-primary">
               {spotlightFeature.tip}
             </span>
-            <span className="text-primary font-bold text-base mb-2 flex items-center justify-center gap-1 text-white drop-shadow">
+            <span className="text-primary font-bold text-base mb-2 flex items-center justify-center gap-1 text-white drop-shadow dark:text-primary-foreground">
               <Sparkles className="h-4 w-4" /> {spotlightFeature.headline}
             </span>
             <div className="border-b border-white/40 w-2/3 mx-auto my-2 opacity-40" />
-            <p className="text-white text-base mb-4">
+            <p className="text-white text-base mb-4 dark:text-primary-foreground">
               {spotlightFeature.desc}
             </p>
           </div>
@@ -181,7 +181,7 @@ export default function FeaturesPage() {
         <AnimatedGroup preset="fade" className="mb-16">
           <Link
             href="/all-docs"
-            className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-primary text-white font-bold text-lg shadow-lg hover:scale-105 transition-all duration-200"
+            className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-primary text-white dark:bg-primary/90 dark:text-primary-foreground font-bold text-lg shadow-lg hover:scale-105 hover:bg-primary/80 dark:hover:bg-primary transition-all duration-200"
           >
             <PlayCircle className="h-6 w-6" /> See it in action
           </Link>
