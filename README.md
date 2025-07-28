@@ -4,6 +4,36 @@
 
 ---
 
+## 🆕 Contributing Docs with MDX (Recommended)
+
+You can now write documentation in simple Markdown/MDX files! This is the easiest way to contribute:
+
+1. Add a new `.mdx` file in `src/docs/` (e.g., `my-topic.mdx`).
+2. Write your content using Markdown headings (`#`, `##`, etc.), lists, links, and even React components (with MDX).
+3. The Table of Contents and sidebar are generated automatically from your headings.
+4. Open a pull request—no need to edit JSON or maintain navigation manually!
+
+**Example:**
+
+```mdx
+# My Topic
+
+Welcome to my docs!
+
+## Getting Started
+
+- Step 1
+- Step 2
+
+## More Info
+
+See [the guide](https://example.com).
+```
+
+Your doc will be available at `/mdx/my-topic`.
+
+---
+
 ## 🚀 Vision
 
 EasyGoDocs is designed to make documentation as easy and enjoyable as writing code.  
