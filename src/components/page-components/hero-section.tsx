@@ -68,6 +68,7 @@ export function HeroSection() {
                 }}
                 className="absolute inset-0 -z-20"
               >
+                {/* // this image needs to be changed to the new image */}
                 <img
                   src="https://ik.imagekit.io/lrigu76hy/tailark/night-background.jpg?updatedAt=1745733451120"
                   alt="background"
@@ -173,6 +174,7 @@ export function HeroSection() {
                     className="bg-gradient-to-b to-background absolute inset-0 z-10 from-transparent from-35%"
                   />
                   <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-4 shadow-lg shadow-zinc-950/15 ring-1">
+                  {/* // this image needs to be changed to the new image */}
                     <img
                       className="bg-background aspect-15/8 relative hidden rounded-2xl dark:block"
                       src="https://tailark.com//_next/image?url=%2Fmail2.png&w=3840&q=75"
@@ -180,6 +182,7 @@ export function HeroSection() {
                       width="2700"
                       height="1440"
                     />
+                    {/* this image needs to be changed to the new image */}
                     <img
                       className="z-2 border-border/25 aspect-15/8 relative rounded-2xl border dark:hidden"
                       src="https://tailark.com/_next/image?url=%2Fmail2-light.png&w=3840&q=75"
