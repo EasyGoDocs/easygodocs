@@ -1,0 +1,119 @@
+# Find Your IP Address
+
+Knowing your IP address is useful for networking, troubleshooting, and server configuration.
+
+## Step 1: Open terminal
+
+Press `Ctrl+Alt+T` to open the terminal.
+
+## Step 2: Show all IP addresses
+
+Display detailed network interface information:
+
+```bash
+ip addr show
+```
+
+This shows all network interfaces with their IP addresses, MAC addresses, and status.
+
+## Step 3: Show only IPv4 address
+
+Get just your IPv4 address in a simple format:
+
+```bash
+hostname -I
+```
+
+This command shows all IPv4 addresses assigned to your system.
+
+## Step 4: Verify network connectivity
+
+Test your internet connection:
+
+```bash
+ping google.com -c 4
+```
+
+The `-c 4` flag sends exactly 4 ping packets and then stops.
+
+## Additional IP address commands
+
+### Show only specific interface
+```bash
+ip addr show eth0
+```
+
+### Get public IP address
+```bash
+curl ifconfig.me
+```
+
+### Show routing table
+```bash
+ip route show
+```
+
+### Check DNS resolution
+```bash
+nslookup google.com
+```
+
+### Show network statistics
+```bash
+ss -tuln
+```
+
+## GUI alternatives
+
+### Network Settings
+- Open Settings
+- Go to Network
+- Click on your connection
+- View IP address information
+
+### System Monitor
+- Open System Monitor
+- Go to Resources tab
+- View network information
+
+## Troubleshooting network issues
+
+### Check if interface is up
+```bash
+ip link show
+```
+
+### Restart network service
+```bash
+sudo systemctl restart NetworkManager
+```
+
+### Check DNS configuration
+```bash
+cat /etc/resolv.conf
+```
+
+### Test localhost
+```bash
+ping 127.0.0.1
+```
+
+## Network configuration files
+
+### View network interfaces
+```bash
+cat /etc/network/interfaces
+```
+
+### Check NetworkManager configuration
+```bash
+ls /etc/NetworkManager/system-connections/
+```
+
+## Next Steps
+
+Understanding your IP address helps you:
+- Configure network services
+- Troubleshoot connectivity issues
+- Set up port forwarding
+- Configure firewall rules 

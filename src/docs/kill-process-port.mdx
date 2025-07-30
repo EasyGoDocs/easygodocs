@@ -1,0 +1,124 @@
+# Kill Process on a Port
+
+Sometimes you need to terminate a process that's using a specific port, especially when developing applications.
+
+## Step 1: Find process using port (example: 3000)
+
+Identify which process is using the port:
+
+```bash
+sudo lsof -t -i:3000
+```
+
+This command returns the Process ID (PID) of the process using port 3000.
+
+## Step 2: Kill process
+
+Terminate the process using its PID:
+
+```bash
+sudo kill -9 $(sudo lsof -t -i:3000)
+```
+
+The `-9` flag forces the process to terminate immediately.
+
+## Step 3: Verify port is free
+
+Check that the port is now available:
+
+```bash
+sudo lsof -i:3000
+```
+
+If no output is shown, the port is free.
+
+## Step 4: Done
+
+The process is terminated and the port is now available for use.
+
+## Alternative methods
+
+### Using netstat
+```bash
+# Find process
+sudo netstat -tulpn | grep :3000
+
+# Kill by PID
+sudo kill -9 <PID>
+```
+
+### Using ss command
+```bash
+# Find process
+sudo ss -tulpn | grep :3000
+
+# Kill by PID
+sudo kill -9 <PID>
+```
+
+### Using fuser
+```bash
+# Kill process on port
+sudo fuser -k 3000/tcp
+```
+
+## Common port conflicts
+
+### Development servers
+- Port 3000 - React development server
+- Port 8080 - Common web server port
+- Port 5000 - Flask development server
+- Port 8000 - Django development server
+
+### Database ports
+- Port 5432 - PostgreSQL
+- Port 3306 - MySQL
+- Port 27017 - MongoDB
+
+## Safety tips
+
+### Check what you're killing
+```bash
+# See process details before killing
+ps aux | grep <PID>
+```
+
+### Use graceful shutdown first
+```bash
+# Try graceful termination first
+sudo kill <PID>
+
+# Force kill if needed
+sudo kill -9 <PID>
+```
+
+### Check for multiple processes
+```bash
+# List all processes on a port
+sudo lsof -i:3000
+```
+
+## Troubleshooting
+
+### Permission denied
+```bash
+# Use sudo for system processes
+sudo lsof -i:3000
+```
+
+### Port still in use
+```bash
+# Check if process restarted
+sudo lsof -i:3000
+
+# Check for zombie processes
+ps aux | grep defunct
+```
+
+## Next Steps
+
+Now you can:
+- Free up ports for development
+- Troubleshoot port conflicts
+- Manage running services
+- Restart applications cleanly 

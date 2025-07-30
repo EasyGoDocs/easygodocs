@@ -1,0 +1,110 @@
+# Check Disk Space
+
+Monitoring disk space is essential for maintaining system performance and preventing storage issues.
+
+## Step 1: Open terminal
+
+Press `Ctrl+Alt+T` to open the terminal.
+
+## Step 2: Check disk usage summary
+
+View overall disk usage for all mounted filesystems:
+
+```bash
+df -h
+```
+
+The `-h` flag shows sizes in human-readable format (GB, MB, etc.).
+
+## Step 3: Check specific folder size
+
+Analyze the size of a specific directory:
+
+```bash
+du -sh /path/to/folder
+```
+
+Examples:
+```bash
+du -sh /home
+du -sh /var/log
+du -sh ~/Downloads
+```
+
+## Step 4: List top 10 large folders
+
+Find the largest directories in the filesystem:
+
+```bash
+du -ahx / | sort -rh | head -n 10
+```
+
+This command:
+- `du -ahx` - Shows all files and directories, human-readable, don't cross filesystem boundaries
+- `sort -rh` - Sorts by size in reverse order (largest first)
+- `head -n 10` - Shows only the top 10 results
+
+## Additional disk space commands
+
+### Check inode usage
+```bash
+df -i
+```
+
+### Show disk usage by filesystem type
+```bash
+df -T
+```
+
+### Check specific directory tree
+```bash
+du -h --max-depth=2 /path/to/directory
+```
+
+### Find large files
+```bash
+find /path/to/search -type f -size +100M -exec ls -lh {} \;
+```
+
+## GUI alternatives
+
+### Install Disk Usage Analyzer
+```bash
+sudo apt install baobab
+```
+
+### Use System Monitor
+- Open System Monitor
+- Go to File Systems tab
+- View disk usage information
+
+## Disk cleanup tips
+
+### Remove old packages
+```bash
+sudo apt autoremove
+sudo apt autoclean
+```
+
+### Clear package cache
+```bash
+sudo apt clean
+```
+
+### Remove old log files
+```bash
+sudo journalctl --vacuum-time=7d
+```
+
+### Clear browser cache
+```bash
+rm -rf ~/.cache/mozilla/firefox/*.default*/cache2
+```
+
+## Next Steps
+
+Regular disk space monitoring helps you:
+- Prevent system slowdowns
+- Identify space-consuming applications
+- Plan storage upgrades
+- Maintain system health 

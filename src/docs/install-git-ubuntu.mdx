@@ -1,0 +1,49 @@
+# Install Git on Ubuntu
+
+Git is a distributed version control system that helps you track changes in your code and collaborate with others.
+
+## Step 1: Update package lists
+
+First, update your package lists to ensure you have the latest information about available packages:
+
+```bash
+sudo apt update
+```
+
+## Step 2: Install Git
+
+Install Git using the apt package manager:
+
+```bash
+sudo apt install git -y
+```
+
+The `-y` flag automatically answers "yes" to prompts during installation.
+
+## Step 3: Verify installation
+
+Check that Git was installed successfully by checking its version:
+
+```bash
+git --version
+```
+
+You should see output similar to `git version 2.34.1`.
+
+## Step 4: Configure Git username and email
+
+Set up your Git identity for commits:
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+```
+
+Replace "Your Name" and "you@example.com" with your actual name and email address.
+
+## Next Steps
+
+Now that Git is installed, you can:
+- Initialize a new repository with `git init`
+- Clone existing repositories with `git clone`
+- Start tracking changes in your projects 

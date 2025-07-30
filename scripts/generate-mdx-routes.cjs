@@ -1,6 +1,6 @@
 // scripts/generate-mdx-routes.cjs
 // This script generates static routes for all MDX files at build time
-
+/* eslint-disable */
 const fs = require('fs');
 const path = require('path');
 

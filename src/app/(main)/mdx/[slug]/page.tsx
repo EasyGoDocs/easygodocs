@@ -5,6 +5,7 @@ import React from 'react';
 import Link from 'next/link';
 import fs from 'fs';
 import path from 'path';
+import { CodeBlock } from '@/components/ui/code-block';
 
 // Generate static params for all MDX files
 export async function generateStaticParams() {
@@ -33,6 +34,41 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   }
 
   const headings = await extractHeadings(source);
+
+  // Custom components for MDX
+  const components = {
+    pre: ({ children, ...props }: React.ComponentProps<'pre'>) => {
+      // Extract language from className if it exists
+      let language = '';
+      let codeContent = children;
+      
+      if (React.isValidElement(children)) {
+        const className = (children.props as { className?: string })?.className;
+        if (className) {
+          language = className.replace('language-', '');
+        }
+        codeContent = (children.props as { children?: React.ReactNode })?.children;
+      }
+      
+      return (
+        <CodeBlock language={language} {...props}>
+          {codeContent}
+        </CodeBlock>
+      );
+    },
+    code: ({ children, className, ...props }: React.ComponentProps<'code'>) => {
+      // If it's a code block (not inline code), let the pre component handle it
+      if (className) {
+        return <code className={className} {...props}>{children}</code>;
+      }
+      // Inline code styling
+      return (
+        <code className="bg-[#1e1e1e] px-2 py-1 rounded-md text-sm font-mono text-white border border-slate-700" {...props}>
+          {children}
+        </code>
+      );
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -80,8 +116,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           </nav>
         </aside>
         <main className="flex-1 max-w-4xl mx-auto px-6 py-8 lg:ml-64">
-          <article className="prose prose-lg dark:prose-invert max-w-none [&>h1]:text-center [&>h1]:text-4xl [&>h1]:font-extrabold [&>h1]:mb-8 [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:mt-12 [&>h2]:mb-6 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:mt-8 [&>h3]:mb-4 [&>p]:text-lg [&>p]:leading-relaxed [&>p]:mb-6 [&>ul]:my-6 [&>ul]:pl-6 [&>li]:mb-2 [&>li]:text-lg [&>code]:bg-muted [&>code]:px-2 [&>code]:py-1 [&>code]:rounded [&>code]:font-semibold [&>a]:text-primary [&>a]:underline [&>a]:font-medium">
-            <MDXRemote source={source} />
+          <article className="prose prose-lg dark:prose-invert max-w-none [&>h1]:text-center [&>h1]:text-4xl [&>h1]:font-extrabold [&>h1]:mb-8 [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:mt-12 [&>h2]:mb-6 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:mt-8 [&>h3]:mb-4 [&>p]:text-lg [&>p]:leading-relaxed [&>p]:mb-6 [&>ul]:my-6 [&>ul]:pl-6 [&>li]:mb-2 [&>li]:text-lg [&>code]:bg-[#1e1e1e] [&>code]:px-2 [&>code]:py-1 [&>code]:rounded-md [&>code]:font-mono [&>code]:text-white [&>code]:border [&>code]:border-slate-700 [&>a]:text-primary [&>a]:underline [&>a]:font-medium">
+            <MDXRemote source={source} components={components} />
           </article>
         </main>
       </div>
