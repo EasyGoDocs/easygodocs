@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Separator } from "@/components/ui/separator";
+import { CodeBlock } from "@/components/ui/code-block";
 
 interface NavItem {
   title: string;
@@ -184,11 +185,9 @@ const renderContentBlock = (block: ContentBlock, idx: number) => {
       );
     case "code":
       return (
-        <div key={idx} className="bg-muted p-4 rounded-lg mb-4">
-          <pre className="text-sm overflow-x-auto">
-            <code>{block.code}</code>
-          </pre>
-        </div>
+        <CodeBlock key={idx} language={block.language} className="mb-4">
+          {block.code}
+        </CodeBlock>
       );
     case "image":
       return (

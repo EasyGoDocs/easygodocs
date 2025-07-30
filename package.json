@@ -28,6 +28,7 @@
     "motion": "^12.23.5",
     "next": "15.3.5",
     "next-mdx-remote": "^5.0.0",
+    "prism-react-renderer": "^2.4.1",
     "prop-types": "^15.8.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
