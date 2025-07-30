@@ -1,0 +1,79 @@
+# Install Node.js using nvm
+
+nvm (Node Version Manager) allows you to install and manage multiple versions of Node.js on your system.
+
+## Step 1: Install nvm
+
+Download and install nvm using the official install script:
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+source ~/.bashrc
+```
+
+This downloads the latest version of nvm and adds it to your shell configuration.
+
+## Step 2: Verify nvm installation
+
+Check that nvm was installed successfully:
+
+```bash
+nvm --version
+```
+
+You should see output similar to `0.39.3`.
+
+## Step 3: Install latest LTS Node.js
+
+Install the latest Long Term Support (LTS) version of Node.js:
+
+```bash
+nvm install --lts
+```
+
+This installs the most recent LTS version available.
+
+## Step 4: Check installed version
+
+Verify that Node.js and npm are working:
+
+```bash
+node -v && npm -v
+```
+
+This command shows both Node.js and npm versions.
+
+## Additional nvm commands
+
+### List available Node.js versions
+```bash
+nvm list-remote
+```
+
+### Install specific version
+```bash
+nvm install 18.17.0
+```
+
+### Switch between versions
+```bash
+nvm use 18.17.0
+```
+
+### Set default version
+```bash
+nvm alias default 18.17.0
+```
+
+### List installed versions
+```bash
+nvm list
+```
+
+## Next Steps
+
+Now that you have nvm installed, you can:
+- Install multiple Node.js versions
+- Switch between versions easily
+- Use different versions for different projects
+- Keep your Node.js installations organized 

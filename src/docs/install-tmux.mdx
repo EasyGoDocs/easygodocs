@@ -1,0 +1,100 @@
+# Install tmux
+
+tmux is a terminal multiplexer that allows you to run multiple terminal sessions within a single window, making it easier to manage multiple tasks.
+
+## Step 1: Update package lists
+
+First, update your package lists:
+
+```bash
+sudo apt update
+```
+
+## Step 2: Install tmux
+
+Install tmux using the apt package manager:
+
+```bash
+sudo apt install tmux -y
+```
+
+## Step 3: Start tmux session
+
+Start a new tmux session:
+
+```bash
+tmux
+```
+
+You'll see a new terminal with a status bar at the bottom.
+
+## Step 4: Detach session
+
+To detach from the tmux session (keep it running in the background):
+
+Press `Ctrl+b` then `d`.
+
+## Basic tmux commands
+
+### Start a named session
+```bash
+tmux new-session -s mysession
+```
+
+### List sessions
+```bash
+tmux list-sessions
+```
+
+### Attach to existing session
+```bash
+tmux attach-session -t mysession
+```
+
+### Create new window
+Press `Ctrl+b` then `c`
+
+### Switch between windows
+Press `Ctrl+b` then window number (0-9)
+
+### Split pane horizontally
+Press `Ctrl+b` then `"`
+
+### Split pane vertically
+Press `Ctrl+b` then `%`
+
+### Switch between panes
+Press `Ctrl+b` then arrow keys
+
+### Kill session
+```bash
+tmux kill-session -t mysession
+```
+
+## tmux configuration
+
+Create a configuration file for custom settings:
+
+```bash
+touch ~/.tmux.conf
+```
+
+Add common configurations:
+```bash
+# Enable mouse support
+set -g mouse on
+
+# Start window numbering at 1
+set -g base-index 1
+
+# Start pane numbering at 1
+setw -g pane-base-index 1
+```
+
+## Next Steps
+
+Now that tmux is installed, you can:
+- Run multiple terminal sessions
+- Keep processes running after disconnecting
+- Organize your work with windows and panes
+- Create persistent development environments 

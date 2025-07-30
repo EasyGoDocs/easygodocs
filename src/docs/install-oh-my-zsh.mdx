@@ -1,0 +1,74 @@
+# Install Oh-My-Zsh
+
+Oh My Zsh is a framework for managing your Zsh configuration, making it easier to customize your shell experience.
+
+## Step 1: Install curl (if not installed)
+
+First, ensure curl is installed on your system:
+
+```bash
+sudo apt install curl -y
+```
+
+## Step 2: Run Oh-My-Zsh install script
+
+Download and run the Oh My Zsh installation script:
+
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+This script will:
+- Download Oh My Zsh
+- Create a backup of your existing Zsh configuration
+- Install Oh My Zsh with default settings
+
+## Step 3: Restart terminal
+
+Close and reopen your terminal to see the new Oh My Zsh configuration in action.
+
+## Step 4: Verify installation
+
+Check that Oh My Zsh is working by looking for:
+- A new prompt theme (usually colorful)
+- Enhanced tab completion
+- Git status in your prompt (if in a git repository)
+
+You can also check your Zsh configuration:
+
+```bash
+cat ~/.zshrc | head -20
+```
+
+## Customizing Oh My Zsh
+
+### Change theme
+Edit `~/.zshrc` and change the `ZSH_THEME` variable:
+```bash
+ZSH_THEME="agnoster"
+```
+
+### Install plugins
+Add plugins to your `~/.zshrc`:
+```bash
+plugins=(git docker npm node)
+```
+
+### Reload configuration
+After making changes:
+```bash
+source ~/.zshrc
+```
+
+## Popular themes
+- `agnoster` - Popular theme with git info
+- `robbyrussell` - Default theme
+- `powerlevel10k` - Fast and feature-rich (requires separate installation)
+
+## Next Steps
+
+Now that Oh My Zsh is installed, you can:
+- Customize your prompt theme
+- Install useful plugins
+- Configure aliases and functions
+- Enhance your shell productivity 

@@ -1,0 +1,61 @@
+# Install Zsh
+
+Zsh (Z shell) is an extended Bourne shell with many features, including improved completion, spelling correction, and theming capabilities.
+
+## Step 1: Install zsh
+
+Install Zsh using the apt package manager:
+
+```bash
+sudo apt install zsh -y
+```
+
+This installs the latest version of Zsh available in your Ubuntu repositories.
+
+## Step 2: Check version
+
+Verify that Zsh was installed successfully:
+
+```bash
+zsh --version
+```
+
+You should see output similar to `zsh 5.8.1 (x86_64-ubuntu-linux-gnu)`.
+
+## Step 3: Set zsh as default shell
+
+Change your default shell to Zsh:
+
+```bash
+chsh -s $(which zsh)
+```
+
+You'll be prompted to enter your password to confirm the change.
+
+## Step 4: Restart terminal
+
+Close and reopen your terminal to start using Zsh as your default shell.
+
+Alternatively, you can start a new Zsh session without changing your default shell:
+
+```bash
+zsh
+```
+
+## Verify the change
+
+After restarting your terminal, verify that Zsh is your default shell:
+
+```bash
+echo $SHELL
+```
+
+You should see `/usr/bin/zsh` as the output.
+
+## Next Steps
+
+Now that Zsh is installed, you can:
+- Install Oh My Zsh for enhanced functionality
+- Customize your shell prompt
+- Use Zsh-specific features like advanced completion
+- Install plugins for additional functionality 

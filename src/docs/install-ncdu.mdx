@@ -1,0 +1,112 @@
+# Install ncdu
+
+ncdu (NCurses Disk Usage) is a disk usage analyzer that provides an interactive interface to explore disk space usage.
+
+## Step 1: Update package lists
+
+First, update your package lists:
+
+```bash
+sudo apt update
+```
+
+## Step 2: Install ncdu
+
+Install ncdu using the apt package manager:
+
+```bash
+sudo apt install ncdu -y
+```
+
+## Step 3: Scan root directory
+
+Analyze disk usage starting from the root directory:
+
+```bash
+sudo ncdu /
+```
+
+This will scan the entire filesystem and show you the largest directories.
+
+## Step 4: Exit ncdu
+
+To quit ncdu, press `q`.
+
+## Basic ncdu usage
+
+### Scan specific directory
+```bash
+ncdu /home/username
+```
+
+### Export results to file
+```bash
+ncdu -o report.txt /path/to/directory
+```
+
+### Read exported report
+```bash
+ncdu -f report.txt
+```
+
+### Exclude certain directories
+```bash
+ncdu --exclude /path/to/exclude /path/to/scan
+```
+
+## ncdu navigation
+
+### Basic controls
+- `↑/↓` - Navigate directories
+- `Enter` - Enter directory
+- `d` - Delete file/directory
+- `r` - Refresh current directory
+- `q` - Quit
+
+### Advanced features
+- `g` - Show graph
+- `i` - Show item info
+- `a` - Toggle apparent size
+- `c` - Toggle count
+
+## Common use cases
+
+### Find large files in home directory
+```bash
+ncdu ~
+```
+
+### Analyze disk usage excluding mounted drives
+```bash
+ncdu --exclude /mnt /
+```
+
+### Quick scan of current directory
+```bash
+ncdu .
+```
+
+## Alternative disk usage tools
+
+### Install baobab (GUI)
+```bash
+sudo apt install baobab
+```
+
+### Use du command
+```bash
+du -sh /* | sort -hr
+```
+
+### Install disk usage analyzer
+```bash
+sudo apt install disk-usage-analyzer
+```
+
+## Next Steps
+
+Now that ncdu is installed, you can:
+- Identify space-consuming directories
+- Clean up disk space efficiently
+- Monitor disk usage over time
+- Generate disk usage reports 

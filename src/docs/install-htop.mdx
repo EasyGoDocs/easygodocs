@@ -1,0 +1,102 @@
+# Install htop
+
+htop is an interactive process viewer and system monitor that provides a more user-friendly alternative to the traditional `top` command.
+
+## Step 1: Update package lists
+
+First, update your package lists:
+
+```bash
+sudo apt update
+```
+
+## Step 2: Install htop
+
+Install htop using the apt package manager:
+
+```bash
+sudo apt install htop -y
+```
+
+## Step 3: Run htop
+
+Start htop to monitor your system:
+
+```bash
+htop
+```
+
+You'll see an interactive interface showing:
+- CPU usage
+- Memory usage
+- Running processes
+- System load
+
+## Step 4: Exit htop
+
+To quit htop, press `q`.
+
+## Basic htop navigation
+
+### Process management
+- `F9` - Kill a process
+- `F4` - Filter processes
+- `F5` - Tree view
+- `F6` - Sort by column
+
+### System information
+- `F1` - Help
+- `F2` - Setup
+- `F3` - Search
+- `F10` - Quit
+
+### Mouse support
+- Click on column headers to sort
+- Click on processes to select them
+- Use scroll wheel to navigate
+
+## htop configuration
+
+Create a custom configuration file:
+
+```bash
+mkdir -p ~/.config/htop
+cp /etc/htoprc ~/.config/htop/htoprc
+```
+
+Edit the configuration:
+```bash
+nano ~/.config/htop/htoprc
+```
+
+Common settings:
+```bash
+# Show CPU usage per core
+cpu_count_from_one=0
+
+# Show memory in MB
+memory_show_meminfo=1
+
+# Update interval (in seconds)
+update_interval=2.0
+```
+
+## Alternative system monitors
+
+### Install glances (more detailed)
+```bash
+sudo apt install glances
+```
+
+### Install bashtop (modern interface)
+```bash
+sudo apt install bashtop
+```
+
+## Next Steps
+
+Now that htop is installed, you can:
+- Monitor system performance in real-time
+- Identify resource-intensive processes
+- Manage running processes
+- Troubleshoot system issues 

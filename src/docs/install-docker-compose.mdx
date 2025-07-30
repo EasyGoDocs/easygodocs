@@ -1,0 +1,91 @@
+# Install Docker Compose
+
+Docker Compose is a tool for defining and running multi-container Docker applications using a YAML file.
+
+## Step 1: Update package lists
+
+First, update your package lists:
+
+```bash
+sudo apt update
+```
+
+## Step 2: Install Docker Compose
+
+Install Docker Compose using the apt package manager:
+
+```bash
+sudo apt install docker-compose -y
+```
+
+This installs Docker Compose from Ubuntu's official repositories.
+
+## Step 3: Verify version
+
+Check that Docker Compose was installed successfully:
+
+```bash
+docker-compose --version
+```
+
+You should see output similar to `Docker Compose version v2.20.0`.
+
+## Step 4: Done
+
+You can now run multi-container applications using Docker Compose.
+
+## Alternative: Install latest version
+
+For the latest version, you can install Docker Compose directly:
+
+```bash
+# Download the latest version
+sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+# Make it executable
+sudo chmod +x /usr/local/bin/docker-compose
+
+# Verify installation
+docker-compose --version
+```
+
+## Basic Docker Compose usage
+
+### Create a docker-compose.yml file
+```yaml
+version: '3.8'
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: myapp
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+```
+
+### Start services
+```bash
+docker-compose up -d
+```
+
+### Stop services
+```bash
+docker-compose down
+```
+
+### View logs
+```bash
+docker-compose logs
+```
+
+## Next Steps
+
+Now that Docker Compose is installed, you can:
+- Define multi-container applications
+- Manage complex deployments
+- Use environment variables and volumes
+- Scale services easily 
