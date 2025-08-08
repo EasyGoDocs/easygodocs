@@ -6,6 +6,7 @@ import "./globals.css";
 import { HeroHeader } from "@/components/ui/header";
 import { Footer } from "@/components/page-components/footer-section";
 import { Databuddy } from '@databuddy/sdk';
+import BackToTop from "@/components/widgets/Back_to_top";
 const dmSans = DM_Sans({
   subsets: ["latin"],
 });
@@ -31,6 +32,7 @@ export default function RootLayout({
         enableBatching={true}
       />
         <Footer />
+        <BackToTop />
       </body>
     </html>
   );
