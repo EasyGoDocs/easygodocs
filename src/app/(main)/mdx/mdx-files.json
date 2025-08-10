@@ -1,7 +1,22 @@
 {
   "files": [
+    "check-disk-space",
     "chrome-download",
-    "react"
+    "find-ip-address",
+    "generate-ssh-key-github",
+    "install-docker-compose",
+    "install-docker-ubuntu",
+    "install-git-ubuntu",
+    "install-htop",
+    "install-ncdu",
+    "install-nodejs-apt",
+    "install-nodejs-nvm",
+    "install-oh-my-zsh",
+    "install-tmux",
+    "install-zsh",
+    "kill-process-port",
+    "react",
+    "ubuntu-package-update"
   ],
-  "generatedAt": "2025-07-28T19:10:21.668Z"
+  "generatedAt": "2025-08-10T06:29:03.235Z"
 }
