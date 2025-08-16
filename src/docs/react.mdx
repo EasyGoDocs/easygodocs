@@ -1,4 +1,4 @@
-# React Guide
+# Getting Started with React
 
 Welcome to the React documentation! This guide will help you understand the basics of React and how to get started building user interfaces.
 
@@ -6,38 +6,198 @@ Welcome to the React documentation! This guide will help you understand the basi
 
 React is a popular open-source JavaScript library for building user interfaces, especially single-page applications. It lets you compose complex UIs from small, isolated pieces of code called 'components'.
 
-## Getting Started
+---
 
-- Install Node.js and npm
-- Create a new React app using Create React App: `npx create-react-app my-app`
-- Navigate to your app folder: `cd my-app`
-- Start the development server: `npm start`
+## Prerequisites
+
+Before you begin, make sure you have the following installed:
+
+- **Node.js and npm:** React applications are built using Node.js. You can download it from [nodejs.org](https://nodejs.org/).
+
+---
+
+## Setup a React Project
+
+The easiest way to set up a new React project is by using **Create React App**.
+
+```bash
+npx create-react-app my-app
+cd my-app
+npm start
+```
+
+This will create a new directory called `my-app` with a basic React project structure and start a development server.
+
+---
+
+## File Structure
+
+A typical React project has the following structure:
+
+```
+my-app/
+├── node_modules/
+├── public/
+│   ├── index.html
+│   └── ...
+├── src/
+│   ├── App.css
+│   ├── App.js
+│   ├── App.test.js
+│   ├── index.css
+│   ├── index.js
+│   └── ...
+├── .gitignore
+├── package.json
+└── README.md
+```
+
+- **`public/`**: Contains the main HTML file and other static assets.
+- **`src/`**: Contains the React components and application logic.
+
+---
 
 ## Core Concepts
 
-- **Components:** The building blocks of React UIs.
-- **JSX:** A syntax extension for writing UI markup in JavaScript.
-- **Props:** Data passed to components.
-- **State:** Data managed within a component.
-- **Hooks:** Functions that let you use state and other React features.
+### Components
 
-## Best Practices
+Components are the building blocks of a React application. They can be either functional or class-based.
 
-- Keep components small and focused.
-- Use functional components and hooks.
-- Lift state up when needed.
-- Use keys for list rendering.
-- Write reusable and testable code.
+**Functional Component:**
 
-# More Help
+```jsx
+import React from 'react';
 
-## Resources
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
 
-- [Official React Docs](https://react.dev/)
-- [React Tutorial](https://react.dev/learn)
-- [React GitHub](https://github.com/facebook/react)
+export default Welcome;
+```
+
+**Class Component:**
+
+```jsx
+import React, { Component } from 'react';
+
+class Welcome extends Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+
+export default Welcome;
+```
+
+### JSX (JavaScript XML)
+
+JSX is a syntax extension for JavaScript that allows you to write HTML-like code in your React components.
+
+```jsx
+const element = <h1>Hello, world!</h1>;
+```
+
+### Props
+
+Props (short for "properties") are used to pass data from a parent component to a child component.
+
+```jsx
+// Parent Component
+import React from 'react';
+import Welcome from './Welcome';
+
+function App() {
+  return <Welcome name="John" />;
+}
+
+export default App;
+```
+
+### State
+
+State is used to manage data that can change over time within a component.
+
+```jsx
+import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+
+export default Counter;
+```
+
+### Component Lifecycle
+
+Class components have lifecycle methods that allow you to run code at specific times.
+
+- **`componentDidMount()`**: Runs after the component is added to the DOM.
+- **`componentDidUpdate()`**: Runs after the component's props or state change.
+- **`componentWillUnmount()`**: Runs just before the component is removed from the DOM.
+
+### Hooks
+
+Hooks are functions that let you use state and other React features in functional components.
+
+- **`useState`**: For managing state.
+- **`useEffect`**: For handling side effects (e.g., data fetching, subscriptions).
+- **`useContext`**: For accessing context.
+
+---
+
+## Styling in React
+
+There are several ways to style React components:
+
+- **CSS Stylesheets:** Import a CSS file into your component.
+- **Inline Styles:** Apply styles directly to an element.
+- **CSS-in-JS Libraries:** Use libraries like `styled-components` or `Emotion`.
+
+---
+
+## React Router
+
+React Router is a library for handling navigation in a React application.
+
+```bash
+npm install react-router-dom
+```
+
+```jsx
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
+function App() {
+  return (
+    <Router>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+      </nav>
+      <Route path="/" exact component={Home} />
+      <Route path="/about" component={About} />
+    </Router>
+  );
+}
+```
+
+---
+
+## Additional Resources
+
+- **[Official React Docs](https://react.dev/)**
+- **[React Tutorial](https://react.dev/learn)**
+- **[React GitHub](https://github.com/facebook/react)**
 
 ---
 
 **Author:** EasyGoDocs Team  
-**Contributors:** Jane Doe, John Smith 
+**Contributors:** Anup Kumar
