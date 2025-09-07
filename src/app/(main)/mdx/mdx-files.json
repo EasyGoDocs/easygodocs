@@ -1,6 +1,5 @@
 {
   "files": [
-    "Setting-up-clerk",
     "check-disk-space",
     "chrome-download",
     "find-ip-address",
@@ -17,7 +16,8 @@
     "install-zsh",
     "kill-process-port",
     "react",
+    "setting-up-clerk",
     "ubuntu-package-update"
   ],
-  "generatedAt": "2025-09-07T08:08:35.739Z"
+  "generatedAt": "2025-09-07T08:14:57.585Z"
 }
