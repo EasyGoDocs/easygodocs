@@ -8,7 +8,6 @@ import { cn } from "@/lib/utils";
 import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { useState, useEffect } from "react";
-import { DarkModeToggle } from "@/components/ui/dark-mode-toggle";
 
 const menuItems = [
   { name: "Features", href: "/features" },
@@ -26,23 +25,26 @@ const Logo = ({ className }: { className?: string }) => {
     };
     checkDark();
     const observer = new MutationObserver(checkDark);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
     return () => observer.disconnect();
   }, []);
 
   return (
-  <span className={cn("flex items-center gap-2", className)}>
-    <img
+    <span className={cn("flex items-center gap-2", className)}>
+      <img
         src={isDark ? "/easygodocs-logo-dark.svg" : "/easygodocs-logo.svg"}
-      alt="EasyGoDocs logo"
-      width={40}
-      height={40}
+        alt="EasyGoDocs logo"
+        width={40}
+        height={40}
         className={cn("rounded-full p-1", !isDark && "bg-white")}
-      style={{ display: "block" }}
-    />
-    <span className="text-balance font-semibold">EasyGoDocs.</span>
-  </span>
-);
+        style={{ display: "block" }}
+      />
+      <span className="text-balance font-semibold">EasyGoDocs.</span>
+    </span>
+  );
 };
 
 export const HeroHeader = () => {
@@ -66,7 +68,7 @@ export const HeroHeader = () => {
           className={cn(
             "mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12",
             isScrolled &&
-              "bg-background/50 max-w-4xl rounded-2xl border backdrop-blur-lg lg:px-5"
+              "bg-background/50 max-w-4xl rounded-2xl border backdrop-blur-lg lg:px-5",
           )}
         >
           <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
@@ -127,7 +129,7 @@ export const HeroHeader = () => {
                   rel="noopener noreferrer"
                   aria-label="GitHub"
                 >
-                  <FaGithub className="w-5 h-5 text-zinc-600 hover:text-zinc-800 transition-colors" />
+                  <FaGithub className="w-5 h-5 text-zinc-600 hover:text-primary transition-colors" />
                 </Link>
                 <Link
                   href="https://twitter.com/"
@@ -135,9 +137,9 @@ export const HeroHeader = () => {
                   rel="noopener noreferrer"
                   aria-label="Twitter (X)"
                 >
-                  <FaXTwitter className="w-5 h-5 text-zinc-600 hover:text-zinc-800 transition-colors" />
+                  <FaXTwitter className="w-5 h-5 text-zinc-600 hover:text-primary transition-colors" />
                 </Link>
-                <DarkModeToggle />
+
                 <Button
                   asChild
                   size="sm"
