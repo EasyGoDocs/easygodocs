@@ -1,5 +1,6 @@
 {
   "files": [
+    "Setting-up-clerk",
     "check-disk-space",
     "chrome-download",
     "find-ip-address",
@@ -18,5 +19,5 @@
     "react",
     "ubuntu-package-update"
   ],
-  "generatedAt": "2025-08-10T06:29:03.235Z"
+  "generatedAt": "2025-09-07T08:08:35.739Z"
 }
