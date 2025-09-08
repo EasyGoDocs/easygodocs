@@ -6,7 +6,15 @@
 
 - <a href="#project-insights"> Project Insights </a>
 - <a href="#demo"> Live Demo </a>
+- <a href="#vision"> easygodocs Vision </a>
 - <a href="#features">Features</a>
+- <a href="#project-structure">Project Structure</a>
+- <a href="#getting-started">Getting Started</a>
+- <a href="#contribute">Contribute</a>
+- <a href="#why-easyGoDocs">Why EasyGoDocs</a>
+- <a href="#built-with">Built With</a>
+- <a href="#deployment">Deployment</a>
+- <a href="#logo">Logo</a>
 - <a href="#technology-stack"> Technology Stack </a>
 - <a href="#acknowledgments">Acknowledgments</a>
 - <a href="#contact">Contact</a>
@@ -64,7 +72,7 @@
 
 <h2 id="demo">🚀 Live Demo</h2>
 
-**Experience easygodocs live here: **
+**Experience easygodocs live here:**
 
 👉 [![**easygodocs**](https://img.shields.io/badge/View-Live%20Demo-orange?style=for-the-badge)](https://easygodocs.vercel.app/)
 
@@ -138,7 +146,7 @@ Your doc will be automatically:
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
-## 🚀 Vision
+<h2 id="vision"> 🚀 easygodocs Vision </h2>
 
 EasyGoDocs is designed to make documentation as easy and enjoyable as writing code.  
 Our mission is to empower teams and open-source communities to create, share, and maintain world-class documentation with minimal friction and maximum clarity.
@@ -150,7 +158,7 @@ Our mission is to empower teams and open-source communities to create, share, an
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
-## ✨ Features
+<h2 id="features">✨ Features</h2>
 
 - 📄 **MDX & Markdown Support:** Write docs in Markdown, extend with React components.
 - 🧩 **Component-Based:** Modular, reusable UI for docs, guides, and API references.
@@ -163,7 +171,7 @@ Our mission is to empower teams and open-source communities to create, share, an
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
-## 🏗️ Project Structure
+<h2 id="project-structure"> 🏗️ Project Structure </h2>
 
 ```
 ├── public/
@@ -198,7 +206,7 @@ Our mission is to empower teams and open-source communities to create, share, an
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
-## 🛠️ Getting Started
+<h2 id="getting-started"> 🛠️ Getting Started </h2>
 
 1. **Install dependencies:**
    ```bash
@@ -226,7 +234,7 @@ Our mission is to empower teams and open-source communities to create, share, an
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
-## 📝 Contributing
+<h2 id="contribute"> 📝 Contribute </h2>
 
 We love contributions! The process is now super simple:
 
@@ -291,7 +299,7 @@ For more details, see the [Contribution Guide](./src/app/contribution-guide/page
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
-## 💡 Why EasyGoDocs?
+<h2 id="why-easyGoDocs"> 💡 Why EasyGoDocs? </h2>
 
 - **For maintainers:** Keep docs up-to-date, beautiful, and easy to extend.
 - **For contributors:** Add new docs with just a Markdown file—no complex setup.
@@ -299,7 +307,7 @@ For more details, see the [Contribution Guide](./src/app/contribution-guide/page
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
-## 📦 Built With
+<h2 id="built-with"> 📦 Built With </h2>
 
 - [Next.js](https://nextjs.org/) (App Router, MDX, Static Generation)
 - [Tailwind CSS](https://tailwindcss.com/) (utility-first styling)
@@ -311,7 +319,7 @@ For more details, see the [Contribution Guide](./src/app/contribution-guide/page
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
-## 🚀 Deployment
+<h2 id="deployment"> 🚀 Deployment </h2>
 
 EasyGoDocs is optimized for Vercel deployment:
 
@@ -331,7 +339,7 @@ The build process automatically:
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
-## 🖼️ Logo
+<h2 id="logo"> 🖼️ Logo </h2>
 
 Our logo is a minimal, modern document with a checkmark or arrow—representing clarity, completion, and the Go spirit.  
 See `/public/easygodocs-logo.svg` and variants in `/public/`.
