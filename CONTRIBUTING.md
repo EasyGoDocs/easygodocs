@@ -5,13 +5,13 @@ We appreciate your interest in contributing.😊<br> </h3>
 
 First off, thank you for considering contributing to **easygodocs!** We're excited to have you join our community. Every contribution, no matter how small, helps us build the best academic resource platform for students.
 
-![Line](https://user-images.githubusercontent.com/85225156/171937799-8fc9e255-9889-4642-9c92-6df85fb86e82.gif)
+---
 
 This guide will walk you through the entire contribution process, from setting up your local environment to submitting a polished pull request.
 
 > **New to Open Source?** No problem! This guide is designed to be beginner-friendly. If you get stuck, don't hesitate to open an issue or ask for help.
 
-![Line](https://user-images.githubusercontent.com/85225156/171937799-8fc9e255-9889-4642-9c92-6df85fb86e82.gif)
+---
 
 ## 📋 Table of Contents
 
@@ -26,7 +26,7 @@ This guide will walk you through the entire contribution process, from setting u
 9. [Attribution](#-attribution)
 10. [Thank you for your contribution](#-thank-you-for-your-contribution)
 
-![Line](https://user-images.githubusercontent.com/85225156/171937799-8fc9e255-9889-4642-9c92-6df85fb86e82.gif)
+---
 
 ## 📜 Code of Conduct
 
@@ -34,13 +34,13 @@ We expect all contributors to follow our [`Code of Conduct`](https://github.com/
 
 By participating in this project, you agree to maintain a **respectful and inclusive environment** for everyone.
 
-![Line](https://user-images.githubusercontent.com/85225156/171937799-8fc9e255-9889-4642-9c92-6df85fb86e82.gif)
+---
 
 ## 📜 License
 
 By contributing to this project, you agree that your contributions will be licensed under the [MIT License](https://github.com/EasyGoDocs/easygodocs/blob/main/LICENSE).
 
-![Line](https://user-images.githubusercontent.com/85225156/171937799-8fc9e255-9889-4642-9c92-6df85fb86e82.gif)
+---
 
 ## 🤝 Ways to Contribute
 
@@ -51,7 +51,7 @@ You can contribute in several ways:
 - **⚡ Add Code:** Fix bugs, build new features, or optimize existing ones.
 - **🧪 Test:** Help us find issues by testing code in different environments.
 
-![Line](https://user-images.githubusercontent.com/85225156/171937799-8fc9e255-9889-4642-9c92-6df85fb86e82.gif)
+---
 
 ## 🎯 Points & Difficulty Levels
 
@@ -65,7 +65,7 @@ Your contributions earn points that count toward GSSoC'25 and your easygodocs Le
 
 > **Note:** The scoring system applies only to GSSOC contributors.
 
-![Line](https://user-images.githubusercontent.com/85225156/171937799-8fc9e255-9889-4642-9c92-6df85fb86e82.gif)
+---
 
 ## 💡 Contribution Guidelines
 
@@ -74,7 +74,7 @@ Your contributions earn points that count toward GSSoC'25 and your easygodocs Le
 * **Responsive Design**: Ensure changes work on both desktop and mobile.
 * **Commit Messages**: Use descriptive commit messages.
 
-![Line](https://user-images.githubusercontent.com/85225156/171937799-8fc9e255-9889-4642-9c92-6df85fb86e82.gif)
+---
 
 ## ✅ PR Review Process
 
@@ -92,7 +92,7 @@ We aim to keep things smooth and transparent:
 
  > For Any Query, Send DM on LinkedIn [Oindil Golder](https://www.linkedin.com/in/oindil-golder/).
 
-![Line](https://user-images.githubusercontent.com/85225156/171937799-8fc9e255-9889-4642-9c92-6df85fb86e82.gif)
+---
 
 ## How To Contribute
 
@@ -106,7 +106,7 @@ We aim to keep things smooth and transparent:
 - **IMPORTANT: Don't make any type of `Pull Request` until & unless you get assigned to an `Issue`**
 - Add screenshots or screen captures to your `Pull Request` to help us understand the effects of the changes that are included in your commits.
 
-![Line](https://user-images.githubusercontent.com/85225156/171937799-8fc9e255-9889-4642-9c92-6df85fb86e82.gif)
+---
 
 <h2 align="center">Need More Help? 🤔</h1>
 
@@ -121,7 +121,7 @@ We aim to keep things smooth and transparent:
 
 <h3 align="center">Show some &nbsp;❤️&nbsp; by &nbsp;🌟&nbsp; this repository!</h3>
 
-![Line](https://user-images.githubusercontent.com/85225156/171937799-8fc9e255-9889-4642-9c92-6df85fb86e82.gif)
+---
 
 ## 🏅 Attribution
 
@@ -129,7 +129,7 @@ This **CONTRIBUTING.md** was prepared with **❤️** by **Divya Jain** for **ea
 
 The structure and recommendations follow **GitHub Open Source Guides** and best practices used in leading open-source repositories.
 
-![Line](https://user-images.githubusercontent.com/85225156/171937799-8fc9e255-9889-4642-9c92-6df85fb86e82.gif)
+---
 
 ## 👍 Thank you for your contribution!!
 
