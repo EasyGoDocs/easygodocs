@@ -1,7 +1,5 @@
 <h1 align="center"> EasyGoDocs </h1>
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
-
 <h3>📖 Table of Contents</h3> 
 
 - <a href="#project-insights"> Project Insights </a>
@@ -29,17 +27,17 @@
 - <a href="#forkers">Forkers</a>
 - <a href="#project-admin">Project Admin</a>
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 >  **Effortless, elegant, and powerful documentation for your Go projects.**
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 <div align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=1000&color=00C853&center=true&vCenter=true&width=900&lines=Thanks+for+visiting+easygodocs!+🙌;Start+the+repo+✅;Share+it+with+others+🌍;Contribute+and+grow+🛠️;Happy+Coding+✨!" alt="Thanks Banner Typing SVG" />
 </div>
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 <h2 id="project-insights">📊 Project Insights</h2>
 
@@ -68,7 +66,7 @@
     </tbody>
 </table>
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 <h2 id="demo">🚀 Live Demo</h2>
 
@@ -76,7 +74,7 @@
 
 👉 [![**easygodocs**](https://img.shields.io/badge/View-Live%20Demo-orange?style=for-the-badge)](https://easygodocs.vercel.app/)
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 ![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg?style=flat)
@@ -87,9 +85,9 @@
 ![GitHub Repo Size](https://img.shields.io/github/repo-size/EasyGoDocs/easygodocs)
 ![Github](https://img.shields.io/github/license/EasyGoDocs/easygodocs)
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
-![GSSoC Logo](/easygodocs/public/gssoc%20logo.png)
+![GSSoC Logo](https://github.com/EasyGoDocs/easygodocs/blob/main/public/gssoc%20logo.png)
 
 🌟 **Exciting News...**
 
@@ -106,7 +104,7 @@
 
 🎉 **I can’t wait to welcome new contributors** from GSSoC 2025 to this easygodocs project family! Let's build, learn, and grow together — one commit at a time. 🔥👨‍💻👩‍💻
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 ## 🆕 Contributing Docs with MDX (Super Simple!)
 
@@ -116,7 +114,7 @@ You can now write documentation in simple Markdown/MDX files! This is the easies
 2. **Write your content** using Markdown headings (`#`, `##`, etc.), lists, links, and even React components (with MDX).
 3. **Open a pull request**—that's it! Your doc will be available at `/mdx/my-topic`.
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 **Example:**
 
@@ -135,7 +133,7 @@ Welcome to my docs!
 See [the guide](https://example.com).
 ```
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 Your doc will be automatically:
 - ✅ Available at `/mdx/my-topic`
@@ -144,7 +142,7 @@ Your doc will be automatically:
 - ✅ Responsive on all devices
 - ✅ Dark mode compatible
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 <h2 id="vision"> 🚀 easygodocs Vision </h2>
 
@@ -156,7 +154,7 @@ Our mission is to empower teams and open-source communities to create, share, an
 - **Powered by Next.js & MDX:** Enjoy fast, interactive docs with the flexibility of React and Markdown.
 - **Community-Driven:** Contributions are easy, transparent, and celebrated.
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 <h2 id="features">✨ Features</h2>
 
@@ -169,7 +167,7 @@ Our mission is to empower teams and open-source communities to create, share, an
 - 🛠 **Easy Customization:** Theming, branding, and structure are all developer-friendly.
 - 🚀 **Vercel Ready:** Optimized for deployment with static generation.
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 <h2 id="project-structure"> 🏗️ Project Structure </h2>
 
@@ -204,7 +202,7 @@ Our mission is to empower teams and open-source communities to create, share, an
 └── vercel.json                     # Vercel deployment config
 ```
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 <h2 id="getting-started"> 🛠️ Getting Started </h2>
 
@@ -232,7 +230,7 @@ Our mission is to empower teams and open-source communities to create, share, an
    # Write your content and visit /mdx/my-topic
    ```
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 <h2 id="contribute"> 📝 Contribute </h2>
 
@@ -286,18 +284,18 @@ function example() {
 
 More detailed information...
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 **Author:** Your Name  
 **Contributors:** Team Members
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 For more details, see the [Contribution Guide](./src/app/contribution-guide/page.tsx).
 
 > **Note:** We also maintain a [Legacy JSON Contribution Guide](./src/app/contribution-guide/legacy-json/page.tsx) for users who need to understand or work with the old JSON-based system.
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 <h2 id="why-easyGoDocs"> 💡 Why EasyGoDocs? </h2>
 
@@ -305,7 +303,7 @@ For more details, see the [Contribution Guide](./src/app/contribution-guide/page
 - **For contributors:** Add new docs with just a Markdown file—no complex setup.
 - **For users:** Find what you need, fast, on any device.
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 <h2 id="built-with"> 📦 Built With </h2>
 
@@ -317,7 +315,7 @@ For more details, see the [Contribution Guide](./src/app/contribution-guide/page
 - [Shadcn](https://ui.shadcn.com/)
 - [MDX](https://mdxjs.com/) (Markdown + React)
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 <h2 id="deployment"> 🚀 Deployment </h2>
 
@@ -337,14 +335,14 @@ The build process automatically:
 - ✅ Creates production-ready bundle
 - ✅ Handles all MDX compilation
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 <h2 id="logo"> 🖼️ Logo </h2>
 
 Our logo is a minimal, modern document with a checkmark or arrow—representing clarity, completion, and the Go spirit.  
 See `/public/easygodocs-logo.svg` and variants in `/public/`.
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 ## Issue Creation ✴
 
@@ -359,7 +357,7 @@ Report bugs and issues or propose improvements through our GitHub repository's "
 - Create a Pull Request which will be reviewed and suggestions would be added to improve it.
 - Add Screenshots and updated website links to help us understand what changes is all about.
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 ## Contributing is fun🧡
 
@@ -368,7 +366,7 @@ Whether it's a new feature, design improvement, or a bug fix - your voice matter
 
 Your insights are invaluable to us. Reach out to us team for any inquiries, feedback, or concerns.
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 <h2 id="acknowledgments">🙏 Acknowledgments</h2>
 
@@ -378,7 +376,7 @@ Your insights are invaluable to us. Reach out to us team for any inquiries, feed
 - Special shoutout to **GirlScript Summer of Code (GSSoC’25)** for the amazing community and support!
 - Built with dedication, collaboration, and lots of chai
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 <h2 id="contact">📞 Contact</h2>
 
@@ -387,7 +385,7 @@ Your insights are invaluable to us. Reach out to us team for any inquiries, feed
 
 *Feel free to reach out with any questions or feedback!*
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 <h2 id="how-to-contribute">🤝How to Contribute</h2>
 
@@ -408,7 +406,7 @@ We love contributions from the community! Whether it's a bug report, a new featu
 
 -   We'd love to hear it! Open an issue to discuss your idea.
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 <h2 id="contributing">🤝 Contributing</h2>
 
@@ -426,17 +424,17 @@ We welcome contributions from developers of all skill levels! Here are some ways
 
 *Thank you to everyone who has made easygodocs better! 💚*
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 <h2 id="code-of-conduct">📜 Code of Conduct</h2>
 
 Please refer to the [`Code of Conduct`](https://github.com/EasyGoDocs/easygodocs/blob/main/CODE_OF_CONDUCT.md) for details on contributing guidelines and community standards.
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 <h2 id="contribution-guidelines">🤝👤 Contribution Guidelines</h2>
 
-We love our contributors! If you'd like to help, please check out our [`CONTRIBUTE.md`]( ) file for guidelines.
+We love our contributors! If you'd like to help, please check out our [`CONTRIBUTE.md`](https://github.com/EasyGoDocs/easygodocs/blob/main/CONTRIBUTING.md) file for guidelines.
 
 >Thank you once again to all our contributors who has contributed to **easygodocs!** Your efforts are truly appreciated. 💖👏
 
@@ -453,20 +451,20 @@ We love our contributors! If you'd like to help, please check out our [`CONTRIBU
 
 See the full list of contributors and their contributions on the [`GitHub Contributors Graph`](https://github.com/EasyGoDocs/easygodocs/graphs/contributors).
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 <h2 align="center">
 <p style="font-family:var(--ff-philosopher);font-size:3rem;"><b> Show some <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" alt="Red Heart" width="40" height="40" /> by starring this awesome repository!
 </p>
 </h2>
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 <h2 id="suggestions-feedback">💡 Suggestions & Feedback</h2>
 
 Feel free to open issues or discussions if you have any feedback, feature suggestions, or want to collaborate!
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 <h2 id="show-your-support">🙌 Show Your Support</h2>
 
@@ -477,13 +475,13 @@ Feel free to open issues or discussions if you have any feedback, feature sugges
 - 💬 **Telling your friends and colleagues**
 - 🤝 **Contributing to the project**
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 <h2 id="license">📄 License</h2>
 
 This project is licensed under the MIT License - see the [`License`](https://github.com/EasyGoDocs/easygodocs/blob/main/LICENSE) file for details.
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 <h2 id="stargazers">⭐ Stargazers</h2>
 
@@ -493,7 +491,7 @@ This project is licensed under the MIT License - see the [`License`](https://git
   </a>
 </div>
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 <h2 id="forkers">🍴 Forkers</h2>
 
@@ -503,7 +501,7 @@ This project is licensed under the MIT License - see the [`License`](https://git
   </a>
 </div>
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 <h2 id="project-admin" align="center">🧑‍💻Project Admin:</h2>
 <table>
@@ -515,15 +513,15 @@ This project is licensed under the MIT License - see the [`License`](https://git
 </tr>
 </table>
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+--- 
 
-<h2 align="center">👨‍🏫Mentors –  easygodocs (GSSoC'25)</h2>
+<h2 align="center">👨‍🏫 Mentors –  easygodocs (GSSoC'25)</h2>
 
 | Role          | Name               | GitHub Profile                                      | LinkedIn Profile                                                        |
 | ------------- | ------------------ | --------------------------------------------------- | ----------------------------------------------------------------------- |
 | Mentor 1 | Hussnain Ahmad |  [itspsychocoder](https://github.com/itspsychocoder) | [Hussnain-Ahmad](https://www.linkedin.com/in/Hussnain-Ahmad/) |
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 <h1 align="center"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Glowing%20Star.png" alt="Glowing Star" width="25" height="25" /> Give us a Star and let's make magic! <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Glowing%20Star.png" alt="Glowing Star" width="25" height="25" /></h1>
 
@@ -531,7 +529,7 @@ This project is licensed under the MIT License - see the [`License`](https://git
      <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Mirror%20Ball.png" alt="Mirror Ball" width="150" height="150" />
 </p>
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 <h3 align="center"> 👨‍💻 Built with ❤️ by easygodocs Team</h3>
 <h4 align="center"> ❤️ Oindil Golder and Contributors ❤️ </h4>
@@ -546,7 +544,7 @@ This project is licensed under the MIT License - see the [`License`](https://git
   </a>
 </p>
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 > Ready to show off your coding achievements? Get started with **easygodocs** today! 🚀
 
