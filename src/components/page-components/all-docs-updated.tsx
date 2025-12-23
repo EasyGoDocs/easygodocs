@@ -1,5 +1,5 @@
 import React from "react";
-import CardDocs from "@/components/ui/all-docs-card";
+import CardDocs from "../ui/all-docs-card";
 import Link from "next/link";
 import { GithubIcon } from "lucide-react";
 import { dbFiles } from "@/db/export-json/index";
@@ -23,8 +23,10 @@ function getMdxDocs() {
   });
 }
 
-export default function AllDocsPage() {
+function AllDocs() {
   const mdxDocs = getMdxDocs();
+  const totalDocs = dbFiles.length + mdxDocs.length;
+  
   return (
     <div className="min-h-screen py-28 max-w-6xl mx-auto px-8">
       <div className="space-y-3 mb-5">
@@ -32,13 +34,11 @@ export default function AllDocsPage() {
           All Documentations
         </h1>
         <p className="max-w-4xl text-muted-foreground">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque ea
-          nobis tenetur quidem possimus rerum exercitationem mollitia commodi
-          ad, deserunt corrupti fugit, facilis ab aliquam vero aliquid delectus
-          inventore? At!
+          Explore our comprehensive collection of {totalDocs} guides and tutorials. 
+          Find everything you need to get started and master the tools with our searchable documentation.
         </p>
         <span>
-          Nothing to read on the previous line,{" "}
+          Can't find what you're looking for?{" "}
           <Link
             href={"/contribution-guide"}
             className="font-semibold underline"
@@ -88,3 +88,5 @@ export default function AllDocsPage() {
     </div>
   );
 }
+
+export default AllDocs;
