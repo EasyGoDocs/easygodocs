@@ -7,7 +7,8 @@ import fs from 'fs';
 import path from 'path';
 import { CodeBlock } from '@/components/ui/code-block';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, BookOpen, Edit, Github, Share2 } from 'lucide-react';
+import { TableOfContents } from '@/components/ui/table-of-contents';
+import { ArrowLeft, BookOpen, Edit, Github, Share2, ChevronRight, Clock, User } from 'lucide-react';
 
 // Generate static params for all MDX files
 export async function generateStaticParams() {
@@ -43,6 +44,36 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
   // Custom components for MDX
   const components = {
+    h1: ({ children, ...props }: React.ComponentProps<'h1'>) => {
+      const text = typeof children === 'string' ? children : '';
+      const id = text.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/^-+|-+$/g, '');
+      return <h1 id={id} {...props}>{children}</h1>;
+    },
+    h2: ({ children, ...props }: React.ComponentProps<'h2'>) => {
+      const text = typeof children === 'string' ? children : '';
+      const id = text.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/^-+|-+$/g, '');
+      return <h2 id={id} {...props}>{children}</h2>;
+    },
+    h3: ({ children, ...props }: React.ComponentProps<'h3'>) => {
+      const text = typeof children === 'string' ? children : '';
+      const id = text.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/^-+|-+$/g, '');
+      return <h3 id={id} {...props}>{children}</h3>;
+    },
+    h4: ({ children, ...props }: React.ComponentProps<'h4'>) => {
+      const text = typeof children === 'string' ? children : '';
+      const id = text.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/^-+|-+$/g, '');
+      return <h4 id={id} {...props}>{children}</h4>;
+    },
+    h5: ({ children, ...props }: React.ComponentProps<'h5'>) => {
+      const text = typeof children === 'string' ? children : '';
+      const id = text.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/^-+|-+$/g, '');
+      return <h5 id={id} {...props}>{children}</h5>;
+    },
+    h6: ({ children, ...props }: React.ComponentProps<'h6'>) => {
+      const text = typeof children === 'string' ? children : '';
+      const id = text.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/^-+|-+$/g, '');
+      return <h6 id={id} {...props}>{children}</h6>;
+    },
     pre: ({ children, ...props }: React.ComponentProps<'pre'>) => {
       let language = '';
       let codeContent = children;
@@ -66,132 +97,154 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         return <code className={className} {...props}>{children}</code>;
       }
       return (
-        <code className="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-sm font-mono border" {...props}>
+        <code className="relative rounded bg-slate-100 dark:bg-slate-800 px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-slate-900 dark:text-slate-100" {...props}>
           {children}
         </code>
       );
-    }
+    },
+    blockquote: ({ children, ...props }: React.ComponentProps<'blockquote'>) => (
+      <blockquote className="mt-6 border-l-2 border-slate-300 dark:border-slate-600 pl-6 italic text-slate-800 dark:text-slate-200" {...props}>
+        {children}
+      </blockquote>
+    ),
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-      {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b bg-white/95 dark:bg-gray-900/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-gray-900/60">
-        <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-4">
-            <Button variant="ghost" size="sm" asChild>
-              <Link href="/all-docs" className="flex items-center gap-2">
-                <ArrowLeft className="h-4 w-4" />
-                Back to Docs
+    <div className="min-h-screen bg-white dark:bg-slate-900 scroll-smooth">
+      {/* Top Navigation */}
+      <div className="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-slate-900/60">
+        <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
+          <div className="flex h-16 items-center justify-between">
+            <div className="flex items-center">
+              <Link href="/" className="flex items-center space-x-2">
+                <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600"></div>
+                <span className="font-bold text-slate-900 dark:text-white">EasyGoDocs</span>
               </Link>
-            </Button>
-            <div className="h-6 w-px bg-border" />
-            <div className="flex items-center gap-2">
-              <BookOpen className="h-5 w-5 text-blue-600" />
-              <span className="font-semibold text-gray-900 dark:text-gray-100">EasyGoDocs</span>
+              <nav className="hidden md:ml-10 md:flex md:space-x-8">
+                <Link href="/all-docs" className="text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white px-3 py-2 text-sm font-medium">
+                  Documentation
+                </Link>
+                <Link href="/contribution-guide" className="text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white px-3 py-2 text-sm font-medium">
+                  Contribute
+                </Link>
+              </nav>
+            </div>
+            <div className="flex items-center space-x-4">
+              <Button variant="ghost" size="sm" asChild>
+                <Link href="https://github.com/EasyGoDocs/easygodocs" target="_blank">
+                  <Github className="h-4 w-4" />
+                </Link>
+              </Button>
             </div>
           </div>
-          
-          <div className="flex items-center gap-2">
-            <Button variant="outline" size="sm" asChild>
-              <Link href="/contribution-guide" className="flex items-center gap-2">
-                <Edit className="h-4 w-4" />
-                Edit Page
-              </Link>
-            </Button>
-            <Button variant="outline" size="sm">
-              <Share2 className="h-4 w-4" />
-            </Button>
-          </div>
         </div>
-      </header>
+      </div>
 
-      <div className="container max-w-7xl mx-auto px-4 py-8">
-        <div className="flex gap-8">
-          {/* Table of Contents - Sidebar */}
-          {headings.length > 0 && (
-            <aside className="hidden lg:block w-64 flex-shrink-0">
-              <div className="sticky top-24 bg-white dark:bg-gray-800 rounded-lg border p-6 shadow-sm">
-                <h2 className="font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
-                  <BookOpen className="h-4 w-4" />
-                  On This Page
-                </h2>
-                <nav className="space-y-2">
-                  {headings.map((h) => (
-                    <a
-                      key={h.id}
-                      href={`#${h.id}`}
-                      className="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                      style={{ paddingLeft: `${(h.depth - 1) * 12}px` }}
-                    >
-                      {h.text}
-                    </a>
-                  ))}
-                </nav>
+      <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
+        <div className="flex">
+          {/* Sidebar */}
+          <div className="hidden lg:block lg:w-64 lg:flex-shrink-0">
+            <div className="sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto py-8">
+              {/* Back Button */}
+              <div className="mb-8">
+                <Button variant="ghost" size="sm" asChild className="w-full justify-start">
+                  <Link href="/all-docs" className="flex items-center">
+                    <ArrowLeft className="mr-2 h-4 w-4" />
+                    Back to Documentation
+                  </Link>
+                </Button>
               </div>
-            </aside>
-          )}
+
+              {/* Table of Contents */}
+              <TableOfContents headings={headings} />
+            </div>
+          </div>
 
           {/* Main Content */}
-          <main className="flex-1 min-w-0">
-            <div className="bg-white dark:bg-gray-800 rounded-lg border shadow-sm">
-              {/* Article Header */}
-              <div className="border-b p-8">
-                <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-4">
-                  <Link href="/all-docs" className="hover:text-blue-600">Documentation</Link>
-                  <span>/</span>
-                  <span className="text-gray-900 dark:text-gray-100">{title}</span>
-                </div>
-                <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-                  {title}
-                </h1>
-                <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
-                  <span>Last updated: Today</span>
-                  <span>•</span>
-                  <span>5 min read</span>
-                </div>
-              </div>
+          <div className="min-w-0 flex-1">
+            <main className="py-8">
+              {/* Breadcrumb */}
+              <nav className="flex mb-8" aria-label="Breadcrumb">
+                <ol className="flex items-center space-x-2 text-sm">
+                  <li>
+                    <Link href="/all-docs" className="text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300">
+                      Documentation
+                    </Link>
+                  </li>
+                  <ChevronRight className="h-4 w-4 text-slate-400" />
+                  <li className="text-slate-900 dark:text-white font-medium">{title}</li>
+                </ol>
+              </nav>
 
-              {/* Article Content */}
-              <article className="p-8">
-                <div className="prose prose-lg dark:prose-invert max-w-none 
-                  prose-headings:text-gray-900 dark:prose-headings:text-gray-100
-                  prose-p:text-gray-700 dark:prose-p:text-gray-300
-                  prose-a:text-blue-600 dark:prose-a:text-blue-400
-                  prose-strong:text-gray-900 dark:prose-strong:text-gray-100
-                  prose-code:text-pink-600 dark:prose-code:text-pink-400
-                  prose-pre:bg-gray-900 dark:prose-pre:bg-gray-950
+              {/* Article */}
+              <article className="max-w-none">
+                {/* Header */}
+                <header className="mb-12">
+                  <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl">
+                    {title}
+                  </h1>
+                  <div className="mt-4 flex items-center space-x-4 text-sm text-slate-500 dark:text-slate-400">
+                    <div className="flex items-center">
+                      <Clock className="mr-1 h-4 w-4" />
+                      Last updated 2 days ago
+                    </div>
+                    <div className="flex items-center">
+                      <User className="mr-1 h-4 w-4" />
+                      EasyGoDocs Team
+                    </div>
+                  </div>
+                </header>
+
+                {/* Content */}
+                <div className="prose prose-slate dark:prose-invert max-w-none
+                  prose-headings:scroll-mt-28 prose-headings:font-display prose-headings:font-normal
+                  prose-h1:text-4xl prose-h1:tracking-tight prose-h1:text-slate-900 dark:prose-h1:text-white
+                  prose-h2:text-2xl prose-h2:tracking-tight prose-h2:text-slate-900 dark:prose-h2:text-white prose-h2:border-b prose-h2:border-slate-200 dark:prose-h2:border-slate-800 prose-h2:pb-2
+                  prose-h3:text-xl prose-h3:tracking-tight prose-h3:text-slate-900 dark:prose-h3:text-white
+                  prose-h4:text-lg prose-h4:tracking-tight prose-h4:text-slate-900 dark:prose-h4:text-white
+                  prose-p:text-slate-700 dark:prose-p:text-slate-300
+                  prose-a:font-semibold prose-a:text-sky-500 hover:prose-a:text-sky-600 dark:prose-a:text-sky-400 dark:hover:prose-a:text-sky-300
+                  prose-strong:text-slate-900 dark:prose-strong:text-white prose-strong:font-semibold
+                  prose-code:font-mono prose-code:font-medium
+                  prose-pre:bg-slate-900 dark:prose-pre:bg-slate-950 prose-pre:border prose-pre:border-slate-200 dark:prose-pre:border-slate-800
+                  prose-ol:text-slate-700 dark:prose-ol:text-slate-300
+                  prose-ul:text-slate-700 dark:prose-ul:text-slate-300
+                  prose-li:text-slate-700 dark:prose-li:text-slate-300
+                  prose-table:text-slate-700 dark:prose-table:text-slate-300
+                  prose-thead:border-slate-200 dark:prose-thead:border-slate-800
+                  prose-tr:border-slate-200 dark:prose-tr:border-slate-800
+                  prose-th:text-slate-900 dark:prose-th:text-white
+                  prose-td:text-slate-700 dark:prose-td:text-slate-300
                   [&>h1]:hidden
-                  [&>h2]:text-2xl [&>h2]:font-bold [&>h2]:mt-12 [&>h2]:mb-6 [&>h2]:border-b [&>h2]:pb-2
-                  [&>h3]:text-xl [&>h3]:font-semibold [&>h3]:mt-8 [&>h3]:mb-4
-                  [&>h4]:text-lg [&>h4]:font-medium [&>h4]:mt-6 [&>h4]:mb-3
-                  [&>p]:leading-relaxed [&>p]:mb-6
-                  [&>ul]:my-6 [&>ol]:my-6
-                  [&>li]:mb-2
-                  [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:bg-blue-50 dark:[&>blockquote]:bg-blue-950/20 [&>blockquote]:p-4 [&>blockquote]:my-6
                 ">
                   <MDXRemote source={source} components={components} />
                 </div>
-              </article>
 
-              {/* Article Footer */}
-              <div className="border-t p-8 bg-gray-50 dark:bg-gray-900/50">
-                <div className="flex items-center justify-between">
-                  <div className="text-sm text-gray-500 dark:text-gray-400">
-                    Found an issue? Help us improve this page.
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Button variant="outline" size="sm" asChild>
-                      <Link href="/contribution-guide" className="flex items-center gap-2">
-                        <Github className="h-4 w-4" />
-                        Edit on GitHub
+                {/* Footer */}
+                <footer className="mt-16 pt-8 border-t border-slate-200 dark:border-slate-800">
+                  <div className="flex items-center justify-between">
+                    <div className="text-sm text-slate-500 dark:text-slate-400">
+                      Found an error? Help us improve this page on{' '}
+                      <Link href="/contribution-guide" className="font-medium text-sky-500 hover:text-sky-600 dark:text-sky-400 dark:hover:text-sky-300">
+                        GitHub
                       </Link>
-                    </Button>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Button variant="outline" size="sm" asChild>
+                        <Link href="/contribution-guide">
+                          <Edit className="mr-2 h-4 w-4" />
+                          Edit this page
+                        </Link>
+                      </Button>
+                      <Button variant="outline" size="sm">
+                        <Share2 className="h-4 w-4" />
+                      </Button>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </main>
+                </footer>
+              </article>
+            </main>
+          </div>
         </div>
       </div>
     </div>
