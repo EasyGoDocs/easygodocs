@@ -9,6 +9,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { useState, useEffect } from "react";
 import { DarkModeToggle } from "@/components/ui/dark-mode-toggle";
+import { CommandPalette } from "@/components/ui/command-palette";
 
 const menuItems = [
   { name: "Features", href: "/features" },
@@ -120,6 +121,11 @@ export const HeroHeader = () => {
                 </ul>
               </div>
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit items-center gap-3">
+                {/* Search - Desktop */}
+                <div className="hidden lg:block">
+                  <CommandPalette />
+                </div>
+                
                 {/* Social Icons */}
                 <Link
                   href="https://github.com/EasyGoDocs/easygodocs.git"

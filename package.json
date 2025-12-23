@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "pnpm run generate-db-index && pnpm run generate-mdx-routes && next build",
     "start": "next start",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "generate-db-index": "node scripts/generate-db-index.cjs",
-    "generate-mdx-routes": "node scripts/generate-mdx-routes.cjs"
+    "generate-mdx-routes": "node scripts/generate-mdx-routes.cjs",
+    "index-algolia": "node scripts/index-algolia.js"
   },
   "dependencies": {
     "@databuddy/sdk": "^1.4.0",
@@ -21,9 +22,12 @@
     "@radix-ui/react-separator": "^1.1.7",
     "@radix-ui/react-slot": "^1.2.3",
     "@types/mdx": "^2.0.13",
+    "algoliasearch": "^5.46.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "dotenv": "^17.2.3",
     "framer-motion": "^12.23.5",
+    "gray-matter": "^4.0.3",
     "lucide-react": "^0.525.0",
     "motion": "^12.23.5",
     "next": "15.3.5",
