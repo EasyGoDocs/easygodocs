@@ -1,7 +1,7 @@
 export const translations = {
   en: {
     search: {
-      placeholder: 'Search documentation...',
+      placeholder: 'Search Docs',
       noResults: 'No results found for',
       searching: 'Searching...'
     },

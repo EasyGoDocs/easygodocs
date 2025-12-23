@@ -70,8 +70,9 @@ export const HeroHeader = () => {
               "bg-background/50 max-w-4xl rounded-2xl border backdrop-blur-lg lg:px-5"
           )}
         >
-          <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
-            <div className="flex w-full justify-between lg:w-auto">
+          <div className="relative flex items-center justify-between py-3 lg:py-4">
+            {/* Logo */}
+            <div className="flex items-center">
               <Link
                 href="/"
                 aria-label="home"
@@ -79,18 +80,10 @@ export const HeroHeader = () => {
               >
                 <Logo />
               </Link>
-
-              <button
-                onClick={() => setMenuState(!menuState)}
-                aria-label={menuState == true ? "Close Menu" : "Open Menu"}
-                className="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden"
-              >
-                <Menu className="in-data-[state=active]:rotate-180 group-data-[state=active]:scale-0 group-data-[state=active]:opacity-0 m-auto size-6 duration-200" />
-                <X className="group-data-[state=active]:rotate-0 group-data-[state=active]:scale-100 group-data-[state=active]:opacity-100 absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200" />
-              </button>
             </div>
 
-            <div className="absolute inset-0 m-auto hidden size-fit lg:block">
+            {/* Desktop Navigation - Center */}
+            <div className="hidden lg:block">
               <ul className="flex gap-8 text-sm">
                 {menuItems.map((item, index) => (
                   <li key={index}>
@@ -105,52 +98,66 @@ export const HeroHeader = () => {
               </ul>
             </div>
 
-            <div className="bg-background group-data-[state=active]:block lg:group-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
-              <div className="lg:hidden">
-                <ul className="space-y-6 text-base">
+            {/* Desktop Actions - Right */}
+            <div className="hidden lg:flex items-center gap-2">
+              <div className={cn("transition-all duration-300", isScrolled ? "scale-90" : "")}>
+                <CommandPalette />
+              </div>
+              <Link href="https://github.com/EasyGoDocs/easygodocs.git" target="_blank" className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg">
+                <FaGithub className="w-4 h-4 text-zinc-600 dark:text-zinc-400" />
+              </Link>
+              <Link href="https://twitter.com/" target="_blank" className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg">
+                <FaXTwitter className="w-4 h-4 text-zinc-600 dark:text-zinc-400" />
+              </Link>
+              <DarkModeToggle />
+              <Button asChild size="sm" className="ml-1">
+                <Link href="/all-docs">All Docs</Link>
+              </Button>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setMenuState(!menuState)}
+              aria-label={menuState ? "Close Menu" : "Open Menu"}
+              className="relative z-20 block cursor-pointer p-2 lg:hidden"
+            >
+              <Menu className="group-data-[state=active]:scale-0 group-data-[state=active]:opacity-0 size-6 duration-200" />
+              <X className="group-data-[state=active]:scale-100 group-data-[state=active]:opacity-100 absolute inset-0 m-auto size-6 scale-0 opacity-0 duration-200" />
+            </button>
+
+            {/* Mobile Menu */}
+            <div className="group-data-[state=active]:block lg:hidden absolute top-full left-0 right-0 mt-2 hidden bg-background rounded-2xl border p-6 shadow-2xl">
+              <div className="space-y-6">
+                <CommandPalette />
+                
+                <ul className="space-y-4 text-base">
                   {menuItems.map((item, index) => (
                     <li key={index}>
                       <Link
                         href={item.href}
-                        className="text-muted-foreground hover:text-accent-foreground block duration-150"
+                        className="text-muted-foreground hover:text-accent-foreground block py-2 duration-150"
+                        onClick={() => setMenuState(false)}
                       >
                         <span>{item.name}</span>
                       </Link>
                     </li>
                   ))}
                 </ul>
-              </div>
-              <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit items-center gap-3">
-                {/* Search - Desktop */}
-                <div className="hidden lg:block">
-                  <CommandPalette />
-                </div>
                 
-                {/* Social Icons */}
-                <Link
-                  href="https://github.com/EasyGoDocs/easygodocs.git"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="GitHub"
-                >
-                  <FaGithub className="w-5 h-5 text-zinc-600 hover:text-zinc-800 transition-colors" />
-                </Link>
-                <Link
-                  href="https://twitter.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Twitter (X)"
-                >
-                  <FaXTwitter className="w-5 h-5 text-zinc-600 hover:text-zinc-800 transition-colors" />
-                </Link>
-                <DarkModeToggle />
-                <Button
-                  asChild
-                  size="sm"
-                  className={cn(isScrolled ? "lg:inline-flex" : "hidden")}
-                >
-                  <Link href="/all-docs">All Docs</Link>
-                </Button>
+                <div className="flex items-center justify-between pt-4 border-t">
+                  <div className="flex items-center gap-3">
+                    <Link href="https://github.com/EasyGoDocs/easygodocs.git" target="_blank" className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg">
+                      <FaGithub className="w-5 h-5 text-zinc-600 dark:text-zinc-400" />
+                    </Link>
+                    <Link href="https://twitter.com/" target="_blank" className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg">
+                      <FaXTwitter className="w-5 h-5 text-zinc-600 dark:text-zinc-400" />
+                    </Link>
+                    <DarkModeToggle />
+                  </div>
+                  <Button asChild size="sm">
+                    <Link href="/all-docs" onClick={() => setMenuState(false)}>All Docs</Link>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
