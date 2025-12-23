@@ -7,7 +7,6 @@ import { HeroHeader } from "@/components/ui/header";
 import { Footer } from "@/components/page-components/footer-section";
 import { Databuddy } from '@databuddy/sdk';
 import BackToTop from "@/components/widgets/Back_to_top";
-import { LanguageProvider } from "@/components/providers/language-provider";
 const dmSans = DM_Sans({
   subsets: ["latin"],
 });
@@ -26,16 +25,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${dmSans.className} antialiased`}>
-        <LanguageProvider>
-          <HeroHeader />
-          {children}
-          <Databuddy
-            clientId="tH13yVVCekicrW94BQ0us"
-            enableBatching={true}
-          />
-          <Footer />
-          <BackToTop />
-        </LanguageProvider>
+        <HeroHeader />
+        {children}
+        <Databuddy
+          clientId="tH13yVVCekicrW94BQ0us"
+          enableBatching={true}
+        />
+        <Footer />
+        <BackToTop />
       </body>
     </html>
   );

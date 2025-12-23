@@ -8,7 +8,7 @@ import path from 'path';
 import { CodeBlock } from '@/components/ui/code-block';
 import { Button } from '@/components/ui/button';
 import { TableOfContents } from '@/components/ui/table-of-contents';
-import { ArrowLeft, BookOpen, Edit, Github, Share2, ChevronRight, Clock, User } from 'lucide-react';
+import { ArrowLeft, Edit, Github, Share2, ChevronRight, Clock, User } from 'lucide-react';
 
 // Generate static params for all MDX files
 export async function generateStaticParams() {

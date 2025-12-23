@@ -31,7 +31,7 @@ export function getOrganizedDocs(): DocCategory[] {
     
     // Auto-categorize based on content and filename
     let category = 'General';
-    let tags: string[] = [];
+    const tags: string[] = [];
     
     if (slug.includes('install') || content.includes('install')) {
       category = 'Installation';

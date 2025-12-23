@@ -63,7 +63,7 @@ export async function GET(request: NextRequest) {
       doc.category.toLowerCase().includes(query)
     )
     .slice(0, 10)
-    .map(({ content, ...doc }) => doc); // Remove content from response
+    .map((doc) => ({ title: doc.title, slug: doc.slug, excerpt: doc.excerpt, category: doc.category })); // Remove content
 
   return NextResponse.json({ results });
 }

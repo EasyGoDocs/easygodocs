@@ -1,7 +1,8 @@
 'use client';
 
+import React from 'react';
 import { useState, useEffect } from 'react';
-import { Search, Command, ArrowRight, Hash, FileText } from 'lucide-react';
+import { Search, Command, ArrowRight, FileText } from 'lucide-react';
 import { searchClient, indexName } from '@/lib/algolia';
 import { cn } from '@/lib/utils';
 
@@ -62,12 +63,15 @@ export function CommandPalette() {
           }
         });
         
-        setResults(hits.map((hit: any) => ({
-          title: hit.title,
-          slug: hit.slug,
-          excerpt: hit.excerpt,
-          category: hit.category
-        })));
+        setResults(hits.map((hit: unknown) => {
+          const typedHit = hit as { title: string; slug: string; excerpt: string; category: string };
+          return {
+            title: typedHit.title,
+            slug: typedHit.slug,
+            excerpt: typedHit.excerpt,
+            category: typedHit.category
+          };
+        }));
         setSelectedIndex(0);
       } catch (error) {
         console.error('Search error:', error);
@@ -179,7 +183,7 @@ export function CommandPalette() {
           ) : query.length >= 2 ? (
             <div className="p-8 text-center text-gray-500">
               <Search className="h-8 w-8 mx-auto mb-2 opacity-50" />
-              <p>No results found for "{query}"</p>
+              <p>No results found for &quot;{query}&quot;</p>
             </div>
           ) : (
             <div className="p-8 text-center text-gray-500">
