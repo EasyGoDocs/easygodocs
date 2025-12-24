@@ -4,4 +4,4 @@ Documentation made Easy.
 
 - Feel free to write docs of your own.
 
-- To contribute read the `Contribution.md` file
+- To contribute read the `contributing.md` file
