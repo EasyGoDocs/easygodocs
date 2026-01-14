@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowRight, ChevronRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { AnimatedGroup } from "@/components/ui/animated-group"; // For the X (Twitter) icon
 
 const transitionVariants = {
@@ -69,13 +69,6 @@ export function HeroSection() {
                 className="absolute inset-0 -z-20"
               >
                 {/* // this image needs to be changed to the new image */}
-                <img
-                  src="https://ik.imagekit.io/lrigu76hy/tailark/night-background.jpg?updatedAt=1745733451120"
-                  alt="background"
-                  className="absolute inset-x-0 top-56 -z-20 hidden lg:top-32 dark:block"
-                  width="3276"
-                  height="4095"
-                />
               </AnimatedGroup>
               <div
                 aria-hidden
@@ -130,27 +123,28 @@ export function HeroSection() {
                   >
                     <div
                       key={1}
-                      className="bg-foreground/20 rounded-[14px] border p-0.5"
+                      className="bg-foreground/20 rounded-lg border p-0.5"
                     >
-                      <Button
-                        asChild
-                        size="lg"
-                        className="rounded-[12px] px-5 text-base"
+                      <Link
+                        href={"/all-docs"}
+                        className={buttonVariants({
+                          size: "lg",
+                        })}
                       >
-                        <Link href="/all-docs">All Docs</Link>
-                      </Button>
-                    </div>
-                    <Button
-                      key={2}
-                      asChild
-                      size="lg"
-                      variant="ghost"
-                      className="h-10.5 rounded-xl px-5"
-                    >
-                      <Link href="/contribution-guide" target="blank">
-                        <span className="text-nowrap">Wanna Contribute ?</span>
+                        All Docs
                       </Link>
-                    </Button>
+                    </div>
+
+                    <Link
+                      href="/contribution-guide"
+                      target="_blank"
+                      className={buttonVariants({
+                        variant: "link",
+                        className: "text-white",
+                      })}
+                    >
+                      <span className="text-nowrap">Wanna Contribute ?</span>
+                    </Link>
                   </AnimatedGroup>
                 </div>
               </div>
@@ -174,7 +168,7 @@ export function HeroSection() {
                     className="bg-gradient-to-b to-background absolute inset-0 z-10 from-transparent from-35%"
                   />
                   <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-4 shadow-lg shadow-zinc-950/15 ring-1">
-                  {/* // this image needs to be changed to the new image */}
+                    {/* // this image needs to be changed to the new image */}
                     <img
                       className="bg-background aspect-15/8 relative hidden rounded-2xl dark:block"
                       src="https://tailark.com//_next/image?url=%2Fmail2.png&w=3840&q=75"
@@ -193,99 +187,99 @@ export function HeroSection() {
                   </div>
                 </div>
               </AnimatedGroup>
+            </div>
+          </section>
+          <section className="bg-background pb-16 pt-16 md:pb-32">
+            <div className="group relative m-auto max-w-5xl px-6">
+              <div className="absolute inset-0 z-10 flex scale-95 items-center justify-center opacity-0 duration-500 group-hover:scale-100 group-hover:opacity-100">
+                <Link
+                  href="/all-docs"
+                  className="block text-sm duration-150 hover:opacity-75"
+                >
+                  <span>See Our Documentations</span>
+                  <ChevronRight className="ml-1 inline-block size-3" />
+                </Link>
               </div>
-            </section>
-            <section className="bg-background pb-16 pt-16 md:pb-32">
-              <div className="group relative m-auto max-w-5xl px-6">
-                <div className="absolute inset-0 z-10 flex scale-95 items-center justify-center opacity-0 duration-500 group-hover:scale-100 group-hover:opacity-100">
-                  <Link
-                    href="/all-docs"
-                    className="block text-sm duration-150 hover:opacity-75"
-                  >
-                    <span>See Our Documentations</span>
-                    <ChevronRight className="ml-1 inline-block size-3" />
-                  </Link>
+              <div className="group-hover:blur-xs mx-auto mt-12 grid max-w-2xl grid-cols-4 gap-x-12 gap-y-8 transition-all duration-500 group-hover:opacity-50 sm:gap-x-16 sm:gap-y-14">
+                <div className="flex">
+                  <img
+                    className="mx-auto h-5 w-fit dark:invert"
+                    src="https://html.tailus.io/blocks/customers/nvidia.svg"
+                    alt="Nvidia Logo"
+                    height="20"
+                    width="auto"
+                  />
                 </div>
-                <div className="group-hover:blur-xs mx-auto mt-12 grid max-w-2xl grid-cols-4 gap-x-12 gap-y-8 transition-all duration-500 group-hover:opacity-50 sm:gap-x-16 sm:gap-y-14">
-                  <div className="flex">
-                    <img
-                      className="mx-auto h-5 w-fit dark:invert"
-                      src="https://html.tailus.io/blocks/customers/nvidia.svg"
-                      alt="Nvidia Logo"
-                      height="20"
-                      width="auto"
-                    />
-                  </div>
 
-                  <div className="flex">
-                    <img
-                      className="mx-auto h-4 w-fit dark:invert"
-                      src="https://html.tailus.io/blocks/customers/column.svg"
-                      alt="Column Logo"
-                      height="16"
-                      width="auto"
-                    />
-                  </div>
-                  <div className="flex">
-                    <img
-                      className="mx-auto h-4 w-fit dark:invert"
-                      src="https://html.tailus.io/blocks/customers/github.svg"
-                      alt="GitHub Logo"
-                      height="16"
-                      width="auto"
-                    />
-                  </div>
-                  <div className="flex">
-                    <img
-                      className="mx-auto h-5 w-fit dark:invert"
-                      src="https://html.tailus.io/blocks/customers/nike.svg"
-                      alt="Nike Logo"
-                      height="20"
-                      width="auto"
-                    />
-                  </div>
-                  <div className="flex">
-                    <img
-                      className="mx-auto h-5 w-fit dark:invert"
-                      src="https://html.tailus.io/blocks/customers/lemonsqueezy.svg"
-                      alt="Lemon Squeezy Logo"
-                      height="20"
-                      width="auto"
-                    />
-                  </div>
-                  <div className="flex">
-                    <img
-                      className="mx-auto h-4 w-fit dark:invert"
-                      src="https://html.tailus.io/blocks/customers/laravel.svg"
-                      alt="Laravel Logo"
-                      height="16"
-                      width="auto"
-                    />
-                  </div>
-                  <div className="flex">
-                    <img
-                      className="mx-auto h-7 w-fit dark:invert"
-                      src="https://html.tailus.io/blocks/customers/lilly.svg"
-                      alt="Lilly Logo"
-                      height="28"
-                      width="auto"
-                    />
-                  </div>
+                <div className="flex">
+                  <img
+                    className="mx-auto h-4 w-fit dark:invert"
+                    src="https://html.tailus.io/blocks/customers/column.svg"
+                    alt="Column Logo"
+                    height="16"
+                    width="auto"
+                  />
+                </div>
+                <div className="flex">
+                  <img
+                    className="mx-auto h-4 w-fit dark:invert"
+                    src="https://html.tailus.io/blocks/customers/github.svg"
+                    alt="GitHub Logo"
+                    height="16"
+                    width="auto"
+                  />
+                </div>
+                <div className="flex">
+                  <img
+                    className="mx-auto h-5 w-fit dark:invert"
+                    src="https://html.tailus.io/blocks/customers/nike.svg"
+                    alt="Nike Logo"
+                    height="20"
+                    width="auto"
+                  />
+                </div>
+                <div className="flex">
+                  <img
+                    className="mx-auto h-5 w-fit dark:invert"
+                    src="https://html.tailus.io/blocks/customers/lemonsqueezy.svg"
+                    alt="Lemon Squeezy Logo"
+                    height="20"
+                    width="auto"
+                  />
+                </div>
+                <div className="flex">
+                  <img
+                    className="mx-auto h-4 w-fit dark:invert"
+                    src="https://html.tailus.io/blocks/customers/laravel.svg"
+                    alt="Laravel Logo"
+                    height="16"
+                    width="auto"
+                  />
+                </div>
+                <div className="flex">
+                  <img
+                    className="mx-auto h-7 w-fit dark:invert"
+                    src="https://html.tailus.io/blocks/customers/lilly.svg"
+                    alt="Lilly Logo"
+                    height="28"
+                    width="auto"
+                  />
+                </div>
 
-                  <div className="flex">
-                    <img
-                      className="mx-auto h-6 w-fit dark:invert"
-                      src="https://html.tailus.io/blocks/customers/openai.svg"
-                      alt="OpenAI Logo"
-                      height="24"
-                      width="auto"
-                    />
-                  </div>
+                <div className="flex">
+                  <img
+                    className="mx-auto h-6 w-fit dark:invert"
+                    src="https://html.tailus.io/blocks/customers/openai.svg"
+                    alt="OpenAI Logo"
+                    height="24"
+                    width="auto"
+                  />
                 </div>
               </div>
-            </section>
-          </div>
-        </main>
-      </>
-    );
-  }
+            </div>
+          </section>
+        </div>
+      </main>
+    </>
+  );
+}
