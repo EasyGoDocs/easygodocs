@@ -28,9 +28,9 @@ export default function RootLayout({
         <HeroHeader />
         {children}
         <Databuddy
-        clientId="tH13yVVCekicrW94BQ0us"
-        enableBatching={true}
-      />
+          clientId="tH13yVVCekicrW94BQ0us"
+          enableBatching={true}
+        />
         <Footer />
         <BackToTop />
       </body>

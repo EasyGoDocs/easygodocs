@@ -29,22 +29,23 @@ export function AboutUsSection() {
           <div className="flex flex-col gap-8">
             <div className="bg-card/80 rounded-2xl p-8 shadow-lg border border-border">
               <h3 className="text-2xl font-semibold text-foreground mb-2">
-                Our Mission
+                Why EasyGoDocs
               </h3>
               <p className="text-muted-foreground">
-                To revolutionize the way teams approach documentation by
-                providing modern, intuitive, and collaborative tools that fit
-                seamlessly into your workflow.
+                Go developers deserve documentation that&apos;s as clean and
+                straightforward as the language itself. We built EasyGoDocs to
+                make docs effortless—no overcomplicated tooling, just simple,
+                elegant output.
               </p>
             </div>
             <div className="bg-card/80 rounded-2xl p-8 shadow-lg border border-border">
               <h3 className="text-2xl font-semibold text-foreground mb-2">
-                Our Team
+                Community First
               </h3>
               <p className="text-muted-foreground">
-                A diverse group of engineers, designers, and creators dedicated
-                to building the future of documentation. We value innovation,
-                transparency, and user-centric design.
+                EasyGoDocs is open source and built by developers, for
+                developers. We welcome contributions, feedback, and ideas from
+                the Go community. Your docs, your way.
               </p>
             </div>
           </div>
@@ -52,18 +53,18 @@ export function AboutUsSection() {
         {/* Right: Text */}
         <div className="flex-1 max-w-xl">
           <h2 className="text-balance text-4xl md:text-7xl lg:mt-16 xl:text-[4rem] mb-6">
-            About Us
+            Built for Go, loved by developers
           </h2>
           <p className="max-w-lg text-lg text-muted-foreground mb-8">
-            We are passionate about making documentation effortless, beautiful,
-            and accessible for everyone. Our mission is to empower teams to
-            create, share, and maintain world-class documentation with ease.
+            EasyGoDocs is the documentation solution for Go projects that just
+            works. Minimal setup, maximum clarity. Write once, publish everywhere—with
+            a modern UI that your users will appreciate.
           </p>
           <Link
-            href="#contact"
+            href="/contribution-guide"
             className="group inline-flex items-center justify-center gap-1 underline underline-offset-2 hover:scale-105 transition ease-linear duration-100"
           >
-            Contact Us <ArrowRight className="size-4" />
+            Contribute to EasyGoDocs <ArrowRight className="size-4" />
           </Link>
         </div>
       </div>

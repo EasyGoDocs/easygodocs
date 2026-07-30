@@ -27,18 +27,18 @@ export function MvpPromoSection() {
         {/* Left: Text */}
         <div className="flex-1 max-w-xl">
           <h2 className="text-balance text-4xl md:text-7xl lg:mt-16 xl:text-[4rem] mb-6">
-            Build your MVPs even faster with our platform
+            Documentation that feels like writing code
           </h2>
           <p className="max-w-lg text-lg text-muted-foreground mb-8">
-            Launch, iterate, and scale your ideas with lightning speed. Our
-            platform provides all the tools you need to turn your vision into
-            reality—no matter your team size or experience level.
+            EasyGoDocs brings elegant, developer-first documentation to your Go
+            projects. Write in MDX, structure with JSON, and ship docs that your
+            users will actually want to read.
           </p>
           <Link
-            href="#get-started"
+            href="/all-docs"
             className="group inline-flex items-center justify-center gap-1 underline underline-offset-2 hover:scale-105 transition ease-linear duration-100"
           >
-            Get Started Now <ArrowRight className="size-4" />
+            Explore the Docs <ArrowRight className="size-4" />
           </Link>
         </div>
         {/* Right: Feature Cards */}
@@ -47,31 +47,31 @@ export function MvpPromoSection() {
             <div className="bg-card/80 rounded-2xl p-8 shadow-lg border border-border transition-transform hover:-translate-y-2 hover:shadow-2xl duration-200">
               <Rocket className="h-10 w-10 text-black mb-4 dark:text-white" />
               <h3 className="text-xl font-semibold text-foreground mb-2">
-                Instant Launch
+                MDX + JSON Workflow
               </h3>
               <p className="text-muted-foreground">
-                Deploy your MVP in minutes, not weeks. Our infrastructure is
-                ready when you are.
+                Write docs in MDX with full React support. Structure your content
+                with simple JSON—no complex setup or build pipelines.
               </p>
             </div>
             <div className="bg-card/80 rounded-2xl p-8 shadow-lg border border-border transition-transform hover:-translate-y-2 hover:shadow-2xl duration-200">
               <Zap className="h-10 w-10 text-black mb-4 dark:text-white" />
               <h3 className="text-xl font-semibold text-foreground mb-2">
-                Supercharged Features
+                Built for Go Developers
               </h3>
               <p className="text-muted-foreground">
-                Access a suite of pre-built components and integrations to
-                accelerate your workflow.
+                Designed with Go projects in mind. Clean, minimal, and fast—so
+                you can focus on what matters: great documentation.
               </p>
             </div>
             <div className="bg-card/80 rounded-2xl p-8 shadow-lg border border-border transition-transform hover:-translate-y-2 hover:shadow-2xl duration-200">
               <Layers className="h-10 w-10 text-black mb-4 dark:text-white" />
               <h3 className="text-xl font-semibold text-foreground mb-2">
-                Effortless Scaling
+                Open Source & Community-Driven
               </h3>
               <p className="text-muted-foreground">
-                Grow from MVP to production without changing platforms. Scale
-                seamlessly as you succeed.
+                Free to use, easy to contribute. Join a community of developers
+                who believe docs should be as simple as writing code.
               </p>
             </div>
           </div>

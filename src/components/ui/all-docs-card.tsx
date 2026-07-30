@@ -13,6 +13,7 @@ interface CardContent {
   tip?: string;
   pro?: boolean;
   className?: string;
+  tags?: string[];
 }
 
 function CardDocs({
@@ -24,6 +25,7 @@ function CardDocs({
   tip,
   pro = false,
   className,
+  tags = [],
 }: CardContent) {
   // Card style based on 'pro' prop
   const cardClass = pro
@@ -52,6 +54,23 @@ function CardDocs({
         >
           {desc}
         </p>
+        {tags && tags.length > 0 && (
+          <div className="flex flex-wrap gap-1 mb-4">
+            {tags.slice(0, 3).map((tag) => (
+              <span
+                key={tag}
+                className={cn(
+                  "px-2 py-1 text-xs rounded-full",
+                  pro 
+                    ? "bg-white/20 text-white" 
+                    : "bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200"
+                )}
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
         {tip && (
           <span className="text-xs text-muted-foreground mt-auto italic flex items-center justify-center gap-1">
             {tip}
